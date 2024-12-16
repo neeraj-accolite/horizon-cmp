@@ -1,10 +1,17 @@
 import React from "react";
 import { ButtonProps } from "./Button.model";
+import styles from "./Button.module.scss";
 
-const Button = ({ label, children, disabled, onClick }: ButtonProps) => {
+const Button = ({
+  label,
+  children,
+  disabled,
+  onClick,
+  variant = "primary",
+}: ButtonProps) => {
   return (
     <button
-      className="rounded font-bold focus:outline-none bg-blue-500 text-white hover:bg-blue-600 px-4 py-2 text-base"
+      className={`${styles.button} ${styles[variant]}`}
       onClick={onClick}
       disabled={disabled}
     >

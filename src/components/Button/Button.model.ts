@@ -1,12 +1,3 @@
-export type ButtonColorProps =
-  | 'primary'
-  | 'secondary'
-  | 'success'
-  | 'error'
-  | 'info'
-  | 'warning';
-
-
 export interface ButtonProps {
   /**
    * The class applied to the parent element.
@@ -23,7 +14,7 @@ export interface ButtonProps {
   /**
    * Button background color
    */
-  color?: ButtonColorProps;
+  variant?: 'primary' | 'secondary';
   /**
    * Button size
    */
