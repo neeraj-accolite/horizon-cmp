@@ -1,13 +1,13 @@
-import React from "react";
-import { ButtonProps } from "./Button.model";
-import styles from "./Button.module.scss";
+import React from 'react';
+import { ButtonProps } from './Button.model';
+import styles from './Button.module.scss';
 
 const Button = ({
   label,
   children,
   disabled,
   onClick,
-  variant = "primary",
+  variant = 'primary',
 }: ButtonProps) => {
   return (
     <button

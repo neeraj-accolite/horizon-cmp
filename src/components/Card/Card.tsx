@@ -17,8 +17,8 @@ export const Card: React.FC<CardProps> = ({
           height: height,
         }}
       >
-        <h2 className="text-xl mb-2">{title}</h2>
-        <div className="flex-1 w-full">{children}</div>
+        <h2 className="mb-2 text-xl">{title}</h2>
+        <div className="w-full flex-1">{children}</div>
       </div>
     </div>
   );

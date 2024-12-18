@@ -1,6 +1,6 @@
 export interface CardProps {
-    title: string;
-    children: React.ReactNode;
-    width?: string;
-    height?: string;
-  }
+  title: string;
+  children: React.ReactNode;
+  width?: string;
+  height?: string;
+}
