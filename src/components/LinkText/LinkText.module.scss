@@ -1,0 +1,9 @@
+.text{
+    @apply font-bold;
+    @apply underline;
+    @apply cursor-pointer;
+
+    &.underline-none{
+        @apply no-underline;
+    }
+}
