@@ -50,7 +50,7 @@ describe('MultiNodeAccordion', () => {
         const height = '200px';
         const width = '300px';
         render(<MultiNodeAccordion items={items} height={height} width={width} />);
-        items.forEach((item, index) => {
+        items.forEach((item) => {
             const accordionItem = screen.getByText(item.title).closest('.accordionItem');
             expect(accordionItem).toHaveStyle(`height: ${height}`);
             expect(accordionItem).toHaveStyle(`width: ${width}`);

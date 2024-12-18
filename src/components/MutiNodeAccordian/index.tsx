@@ -1,2 +1,2 @@
-export * from './MultiNodeAccordian';
-export * from './MultiNodeAccordian.model';
+export * from './Accordion';
+export * from './Accordion.model';
