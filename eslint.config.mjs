@@ -21,6 +21,7 @@ const eslintConfig = [
     rules: {
       '@next/next/no-page-custom-font': 'off',
     },
+    ignorePatterns: ['.lintstagedrc.js'],
   }),
 ];
 
