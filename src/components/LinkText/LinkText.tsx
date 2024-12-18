@@ -9,11 +9,11 @@ const LinkText = ({
   labelColor = 'inherit',
   size = 'medium',
   fontWeight = 700,
-  underline = true
+  underline = true,
 }: LinkTextProps) => {
   const textStyle = {
     color: labelColor,
-    fontWeight, 
+    fontWeight,
     fontSize: size === 'small' ? '12px' : size === 'medium' ? '16px' : '20px',
   };
 
@@ -21,7 +21,7 @@ const LinkText = ({
     <p
       onClick={onClick}
       style={textStyle}
-      className={`${styles.text} ${!underline? styles['underline-none']:''} ${rootClass || ''}`}
+      className={`${styles.text} ${!underline ? styles['underline-none'] : ''} ${rootClass || ''}`}
     >
       {label}
     </p>
