@@ -12,6 +12,7 @@ export const MultiNodeAccordion: React.FC<AccordionProps> = ({
 
   const toggleAccordion = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
+    //this is sample comment
   };
 
   return (
