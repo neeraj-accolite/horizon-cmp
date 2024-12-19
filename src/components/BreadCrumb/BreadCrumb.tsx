@@ -1,31 +1,39 @@
 import React from 'react';
+import { Breadcrumbs, BreadcrumbItem } from '@nextui-org/react';
 
 export interface BreadCrumbProps {
   items: { label: string; href?: string }[];
 }
 
 const BreadCrumb: React.FC<BreadCrumbProps> = ({ items }) => {
+  const [currentPage, setCurrentPage] = React.useState(
+    items.length > 0 ? items[items.length - 1].label : '',
+  );
+
+  if (items.length === 0) {
+    return null; // Render nothing if there are no items
+  }
+
+  const handleClick = (itemLabel: string, href?: string) => {
+    setCurrentPage(itemLabel);
+    if (href) {
+      window.location.href = href; // Navigate to the provided URL
+    }
+  };
   return (
-    <div className="flex items-center text-sm text-gray-600">
-      {items.map((item, index) => (
-        <div key={index} className="flex flex-row items-center">
-          {item.href && index !== items.length - 1 ? (
-            <a href={item.href} className="cursor-pointer no-underline">
-              {item.label}
-            </a>
-          ) : (
-            <div
-              className={`font-bold ${index === items.length - 1 ? 'text-gray-800' : ''}`}
-            >
-              {item.label}
-            </div>
-          )}
-          {index < items.length - 1 && (
-            <div className="mx-2 text-gray-800">&gt;</div>
-          )}
-        </div>
+    <Breadcrumbs>
+      {items.map((item) => (
+        <BreadcrumbItem
+          onPress={() => handleClick(item.label, item.href)}
+          key={item.label}
+          href={item.href}
+          isCurrent={currentPage === item.label}
+          style={{ fontWeight: currentPage === item.label ? 'bold' : 'normal' }}
+        >
+          {item.label}
+        </BreadcrumbItem>
       ))}
-    </div>
+    </Breadcrumbs>
   );
 };
 
