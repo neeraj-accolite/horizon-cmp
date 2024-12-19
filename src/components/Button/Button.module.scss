@@ -3,9 +3,9 @@
 }
 
 .primary {
-  @apply bg-red-500 text-white hover:bg-blue-600;
+  @apply bg-primary text-white hover:bg-blue-600;
 }
 
 .secondary {
-  @apply bg-gray-500 text-white hover:bg-gray-600;
+  @apply bg-primary text-white hover:bg-gray-600;
 }
