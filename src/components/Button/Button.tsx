@@ -2,6 +2,7 @@ import React from 'react';
 import { ButtonProps } from './Button.model';
 import styles from './Button.module.scss';
 
+// Button Component
 const Button = ({
   label,
   children,
