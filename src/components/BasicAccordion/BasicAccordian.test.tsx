@@ -30,8 +30,6 @@ describe('UI Component - BasicAccordion', () => {
 
     // Check if the element exists
     expect(accordionElement).not.toBeNull();
-
-    // Check the styles
     if (accordionElement) {
       expect(accordionElement).toHaveStyle('height: auto');
       expect(accordionElement).toHaveStyle('width: 50%');
@@ -42,5 +40,9 @@ describe('UI Component - BasicAccordion', () => {
     const container = render(<BasicAccordion {...defaultProps} />);
     const titleElement = await container.findByText('Accordion Title');
     expect(titleElement).toHaveClass('boldTitle');
+  });
+  test('matches the snapshot', () => {
+    const container = render(<BasicAccordion {...defaultProps} />);
+    expect(container.asFragment()).toMatchSnapshot();
   });
 });
