@@ -1,8 +1,6 @@
-// SingleNodeAccordion.tsx
-import React, { useState } from 'react';
-import styles from './BasicAccordion.module.scss';
-import Image from 'next/image';
+import { Accordion, AccordionItem } from '@nextui-org/react';
 import { BasicAccordionProps } from './BasicAccordion.model';
+import styles from './BasicAccordion.module.scss';
 
 export const BasicAccordion: React.FC<BasicAccordionProps> = ({
   title,
@@ -10,29 +8,17 @@ export const BasicAccordion: React.FC<BasicAccordionProps> = ({
   height,
   width,
 }) => {
-  const [isActive, setIsActive] = useState<boolean>(false);
-
-  const toggleAccordion = () => {
-    setIsActive(!isActive);
-  };
-
   return (
     <div className={styles.accordion} style={{ height, width }}>
-      <div className={styles.accordionTitle} onClick={toggleAccordion}>
-        <span>{title}</span>
-        <Image
-          src={isActive ? '/upArrow.svg' : '/downArrow.svg'}
-          alt="Toggle Arrow"
-          width={24}
-          height={24}
-          className={styles.icon}
-        />
-      </div>
-      <div
-        className={`${styles.accordionContent} ${isActive ? styles.active : ''}`}
-      >
-        {description}
-      </div>
+      <Accordion>
+        <AccordionItem
+          key="1"
+          aria-label={title}
+          title={<span className={styles.boldTitle}>{title}</span>}
+        >
+          {description}
+        </AccordionItem>
+      </Accordion>
     </div>
   );
 };

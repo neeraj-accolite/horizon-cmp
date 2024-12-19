@@ -6,7 +6,9 @@ exports[`UI Component - Button render the button component unchanged with defaul
   "baseElement": <body>
     <div>
       <button
-        class="button primary"
+        aria-label="Primary Button"
+        class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] !transition-none data-[pressed=true]:scale-100 bg-default text-default-foreground data-[hover=true]:opacity-hover button primary"
+        type="button"
       >
         Primary Button
       </button>
@@ -14,7 +16,9 @@ exports[`UI Component - Button render the button component unchanged with defaul
   </body>,
   "container": <div>
     <button
-      class="button primary"
+      aria-label="Primary Button"
+      class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] !transition-none data-[pressed=true]:scale-100 bg-default text-default-foreground data-[hover=true]:opacity-hover button primary"
+      type="button"
     >
       Primary Button
     </button>

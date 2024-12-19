@@ -15,7 +15,7 @@ const Template: StoryFn<BasicAccordionProps> = (args) => (
 export const Default = Template.bind({});
 Default.args = {
   title: 'Accordion Title',
-  description: 'This is the description content of the accordion.',
+  description: 'This is the description content of the accordion',
   height: 'auto',
   width: '100%',
 };
