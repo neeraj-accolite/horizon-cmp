@@ -13,6 +13,7 @@ export const Default = Template.bind({});
 Default.args = {
   items: [
     { label: 'Home', href: '/' },
+    { label: 'Services', href: '/services' },
     { label: 'Plumbing', href: '/plumbing' },
   ],
 };

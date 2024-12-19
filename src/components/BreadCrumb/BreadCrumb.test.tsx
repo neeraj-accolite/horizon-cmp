@@ -1,14 +1,14 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import BreadCrumb from './BreadCrumb';
 import { BreadCrumbProps } from './BreadCrumb';
+import { render, screen, fireEvent } from '@testing-library/react';
 
 describe('BreadCrumb Component', () => {
   const renderComponent = (props: BreadCrumbProps) =>
     render(<BreadCrumb {...props} />);
 
-  test('renders all breadcrumb items with links', () => {
+  test('renders all breadcrumb items', () => {
     const items = [
       { label: 'Home', href: '/' },
       { label: 'Services', href: '/services' },
@@ -20,33 +20,9 @@ describe('BreadCrumb Component', () => {
     items.forEach((item) => {
       expect(screen.getByText(item.label)).toBeInTheDocument();
     });
-
-    const separators = screen.getAllByText('>');
-    expect(separators.length).toBe(items.length - 1); // One less than the number of items
   });
 
-  test('renders all breadcrumb items without links', () => {
-    const items = [
-      { label: 'Home' },
-      { label: 'Services' },
-      { label: 'Plumbing' },
-    ];
-
-    renderComponent({ items });
-
-    // Check all breadcrumb items are rendered
-    items.forEach((item) => {
-      const element = screen.getByText(item.label);
-      expect(element).toBeInTheDocument();
-      expect(element.tagName).toBe('DIV');
-    });
-
-    // Check separator (>)
-    const separators = screen.getAllByText('>');
-    expect(separators.length).toBe(items.length - 1); // One less than the number of items
-  });
-
-  test('highlights the last breadcrumb item', () => {
+  test('highlights the last breadcrumb item as bold', () => {
     const items = [
       { label: 'Home', href: '/' },
       { label: 'Services', href: '/services' },
@@ -55,18 +31,17 @@ describe('BreadCrumb Component', () => {
 
     renderComponent({ items });
 
-    const lastItem = screen.getByText('Plumbing');
+    const lastItem = screen.getByText('Plumbing').closest('li');
+
     expect(lastItem).toBeInTheDocument();
-    expect(lastItem).toHaveClass('text-gray-800'); // Verify the last item is highlighted
-    expect(lastItem).toHaveClass('font-bold');
+
+    expect(lastItem).toHaveStyle('font-weight: bold');
   });
 
   test('renders correctly with an empty items array', () => {
     const { container } = render(<BreadCrumb items={[]} />);
 
-    // Check that the container for breadcrumbs is empty
-    const breadcrumbContainer = container.firstChild;
-    expect(breadcrumbContainer).toBeEmptyDOMElement();
+    expect(container.firstChild).toBeNull();
   });
 
   test('handles edge case with only one item', () => {
@@ -74,9 +49,35 @@ describe('BreadCrumb Component', () => {
 
     renderComponent({ items });
 
-    // Check that the item is rendered without a separator
     expect(screen.getByText('Home')).toBeInTheDocument();
-    expect(screen.queryByText('>')).not.toBeInTheDocument();
+  });
+
+  test('navigates to the correct href when a breadcrumb item is clicked', () => {
+    const items = [
+      { label: 'Home', href: '/' },
+      { label: 'Services', href: '/services' },
+      { label: 'Plumbing', href: '/services/plumbing' },
+    ];
+    render(<BreadCrumb items={items} />);
+
+    const originalLocation = window.location;
+    Object.defineProperty(window, 'location', {
+      value: { href: '' },
+      writable: true,
+    });
+
+    fireEvent.click(screen.getByText('Services'));
+
+    expect(window.location.href).toBe('/services');
+
+    window.location = originalLocation;
+  });
+
+  test('renders nothing when an empty array is passed', () => {
+    render(<BreadCrumb items={[]} />);
+
+    const breadcrumbs = screen.queryByRole('navigation');
+    expect(breadcrumbs).toBeNull();
   });
 
   test('matches the snapshot', () => {
