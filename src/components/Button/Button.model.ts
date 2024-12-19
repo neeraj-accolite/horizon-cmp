@@ -1,4 +1,6 @@
-export interface ButtonProps {
+import { ButtonProps as CustomButtonProps } from '@nextui-org/button';
+
+export interface ButtonProps extends CustomButtonProps {
   /**
    * The class applied to the parent element.
    */
@@ -12,28 +14,11 @@ export interface ButtonProps {
    */
   labelColor?: string;
   /**
-   * Button background color
-   */
-  variant?: 'primary' | 'secondary';
-  /**
-   * Button size
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
    * Font weight of the button
    */
   fontWeight?: number;
   /**
-   * Button Text or any custom component
-   */
-  children?: React.ReactNode | string;
-
-  /**
    * OnClick event of the buttons
    */
   onClick?: () => void;
-  /**
-   * Flag to disable the button
-   */
-  disabled?: boolean;
 }
