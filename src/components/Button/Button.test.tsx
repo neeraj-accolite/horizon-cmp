@@ -30,7 +30,7 @@ describe('UI Component - Button', () => {
 
   test('render the button component unchanged with default parameters', async () => {
     const container = render(
-      <Button label="Primary Button" variant="primary" labelColor="#ff0000" />,
+      <Button label="Primary Button" color="primary" labelColor="#ff0000" />,
     );
     expect(container).toMatchSnapshot();
   });
