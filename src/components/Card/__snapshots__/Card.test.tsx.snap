@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="card-container transition-shadow"
+  >
+    <div
+      class="card flex flex-col items-center p-4 text-center"
+      style="width: 400px; height: 300px;"
+    >
+      <h2
+        class="mb-2 text-xl"
+      >
+        Test Card
+      </h2>
+      <div
+        class="w-full flex-1"
+      >
+        <div>
+          Test Child
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

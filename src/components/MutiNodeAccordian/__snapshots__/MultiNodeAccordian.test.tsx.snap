@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultiNodeAccordion matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="accordion"
+  >
+    <div
+      class="accordionItem"
+    >
+      <div
+        class="accordionTitle"
+      >
+        <span>
+          Accordion Item 1
+        </span>
+        <img
+          alt="Toggle Arrow"
+          class="icon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/downArrow.svg"
+          style="color: transparent;"
+          width="24"
+        />
+      </div>
+      <div
+        class="accordionContent "
+      >
+        This is the description for accordion item 1.
+        <div
+          class="children"
+        >
+          <ul>
+            <li>
+              Child Item 1
+            </li>
+            <li>
+              Child Item 2
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      class="accordionItem"
+    >
+      <div
+        class="accordionTitle"
+      >
+        <span>
+          Accordion Item 2
+        </span>
+        <img
+          alt="Toggle Arrow"
+          class="icon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/downArrow.svg"
+          style="color: transparent;"
+          width="24"
+        />
+      </div>
+      <div
+        class="accordionContent "
+      >
+        This is the description for accordion item 2.
+        <div
+          class="children"
+        >
+          <ul>
+            <li>
+              Child Item 1
+            </li>
+            <li>
+              Child Item 2
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      class="accordionItem"
+    >
+      <div
+        class="accordionTitle"
+      >
+        <span>
+          Accordion Item 3
+        </span>
+        <img
+          alt="Toggle Arrow"
+          class="icon"
+          data-nimg="1"
+          decoding="async"
+          height="24"
+          loading="lazy"
+          src="/downArrow.svg"
+          style="color: transparent;"
+          width="24"
+        />
+      </div>
+      <div
+        class="accordionContent "
+      >
+        This is the description for accordion item 3.
+        <div
+          class="children"
+        >
+          <ul>
+            <li>
+              Child Item 1
+            </li>
+            <li>
+              Child Item 2
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
