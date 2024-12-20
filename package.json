@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "dev:horizon": "TENANT=horizon next dev --turbopack",
+    "dev": "TENANT=horizon next dev --turbopack",
+    "dev:casteel": "TENANT=casteel next dev --turbopack",
+    "dev:goldmedal": "TENANT=gold-medal next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "format": "prettier --check .",

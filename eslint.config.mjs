@@ -1,4 +1,4 @@
-import { dirname } from 'path';
+import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { FlatCompat } from '@eslint/eslintrc';
 
@@ -22,6 +22,11 @@ const eslintConfig = [
       '@next/next/no-page-custom-font': 'off',
     },
     ignorePatterns: ['.lintstagedrc.js'],
+    settings: {
+      tailwindcss: {
+        config: path.join(__dirname, './tailwind.config.ts'),
+      },
+    },
   }),
 ];
 
