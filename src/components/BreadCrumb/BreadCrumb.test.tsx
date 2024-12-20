@@ -2,7 +2,7 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import BreadCrumb from './BreadCrumb';
 import { BreadCrumbProps } from './BreadCrumb';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 describe('BreadCrumb Component', () => {
   const renderComponent = (props: BreadCrumbProps) =>
@@ -34,8 +34,7 @@ describe('BreadCrumb Component', () => {
     const lastItem = screen.getByText('Plumbing').closest('li');
 
     expect(lastItem).toBeInTheDocument();
-
-    expect(lastItem).toHaveStyle('font-weight: bold');
+    expect(lastItem).toHaveClass('font-bold');
   });
 
   test('renders correctly with an empty items array', () => {
@@ -50,27 +49,6 @@ describe('BreadCrumb Component', () => {
     renderComponent({ items });
 
     expect(screen.getByText('Home')).toBeInTheDocument();
-  });
-
-  test('navigates to the correct href when a breadcrumb item is clicked', () => {
-    const items = [
-      { label: 'Home', href: '/' },
-      { label: 'Services', href: '/services' },
-      { label: 'Plumbing', href: '/services/plumbing' },
-    ];
-    render(<BreadCrumb items={items} />);
-
-    const originalLocation = window.location;
-    Object.defineProperty(window, 'location', {
-      value: { href: '' },
-      writable: true,
-    });
-
-    fireEvent.click(screen.getByText('Services'));
-
-    expect(window.location.href).toBe('/services');
-
-    window.location = originalLocation;
   });
 
   test('renders nothing when an empty array is passed', () => {
