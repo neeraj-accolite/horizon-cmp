@@ -18,10 +18,40 @@ export const Primary: Story = {
   },
 };
 
-export const Secondary: Story = {
+export const SecondaryWithDefaultBorderColor: Story = {
   args: {
     label: 'Secondary Button',
     color: 'secondary',
+    onClick: () => console.log('Secondary button is clicked'),
+    disabled: false,
+  },
+};
+
+export const SecondaryWithCustomBorderColor: Story = {
+  args: {
+    label: 'Secondary Button',
+    color: 'secondary',
+    onClick: () => console.log('Secondary button is clicked'),
+    disabled: false,
+    borderColor: '#FF0000',
+  },
+};
+
+export const SecondaryWithCustomLabelColor: Story = {
+  args: {
+    label: 'Secondary Button',
+    color: 'secondary',
+    labelColor: '#FF0000',
+    onClick: () => console.log('Secondary button is clicked'),
+    disabled: false,
+  },
+};
+
+export const SecondaryWithCustomFontWeight: Story = {
+  args: {
+    label: 'Secondary Button',
+    color: 'secondary',
+    fontWeight: 800,
     onClick: () => console.log('Secondary button is clicked'),
     disabled: false,
   },

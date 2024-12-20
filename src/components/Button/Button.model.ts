@@ -8,7 +8,7 @@ export interface ButtonProps extends CustomButtonProps {
   /**
    * Label for the button
    */
-  label?: string;
+  label: string;
   /**
    * Label Color
    */
@@ -17,6 +17,10 @@ export interface ButtonProps extends CustomButtonProps {
    * Font weight of the button
    */
   fontWeight?: number;
+  /**
+   * Border Color for border
+   */
+  borderColor?: string;
   /**
    * OnClick event of the buttons
    */

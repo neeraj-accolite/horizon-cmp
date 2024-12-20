@@ -1,11 +1,12 @@
 .button {
-  @apply rounded px-4 py-2 text-sm font-bold;
+  @apply w-[296px] h-[40px] rounded-lg px-4 py-2 text-sm font-bold;
 }
 
 .primary {
-  @apply bg-red-500 text-white hover:bg-blue-600;
+  @apply bg-blue-500 text-white hover:bg-blue-600; // No border for primary
 }
 
 .secondary {
-  @apply bg-gray-500 text-white hover:bg-gray-600;
+  @apply bg-transparent border-2; // Default border styling
+  border-color: #6D6C76
 }
