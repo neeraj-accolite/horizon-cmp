@@ -2,107 +2,106 @@
 
 exports[`BreadCrumb Component matches the snapshot 1`] = `
 <DocumentFragment>
-  <nav
-    aria-label="Breadcrumbs"
-    data-slot="base"
+  <div
+    class="overflow-x-auto px-4"
   >
-    <ol
-      class="flex flex-wrap list-none rounded-small"
-      data-slot="list"
+    <nav
+      aria-label="Breadcrumbs"
+      data-slot="base"
     >
-      <li
-        class="flex items-center"
-        data-slot="base"
-        href="/"
-        style="font-weight: normal;"
+      <ol
+        class="flex list-none rounded-small flex-nowrap"
+        data-slot="list"
       >
-        <a
-          class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
-          data-current="false"
-          data-slot="item"
+        <li
+          class="flex items-center font-normal"
+          data-slot="base"
           href="/"
         >
-          Home
-        </a>
-        <span
-          aria-hidden="true"
-          class="px-1 rtl:rotate-180 text-foreground/50"
-          data-slot="separator"
-        >
-          <svg
-            aria-hidden="true"
-            fill="none"
-            focusable="false"
-            height="1em"
-            role="presentation"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.5"
-            viewBox="0 0 24 24"
-            width="1em"
+          <a
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            href="/"
           >
-            <path
-              d="m9 18 6-6-6-6"
-            />
-          </svg>
-        </span>
-      </li>
-      <li
-        class="flex items-center"
-        data-slot="base"
-        href="/services"
-        style="font-weight: normal;"
-      >
-        <a
-          class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
-          data-current="false"
-          data-slot="item"
+            Home
+          </a>
+          <span
+            aria-hidden="true"
+            class="px-1 rtl:rotate-180 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center font-normal"
+          data-slot="base"
           href="/services"
         >
-          Services
-        </a>
-        <span
-          aria-hidden="true"
-          class="px-1 rtl:rotate-180 text-foreground/50"
-          data-slot="separator"
-        >
-          <svg
-            aria-hidden="true"
-            fill="none"
-            focusable="false"
-            height="1em"
-            role="presentation"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.5"
-            viewBox="0 0 24 24"
-            width="1em"
+          <a
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            href="/services"
           >
-            <path
-              d="m9 18 6-6-6-6"
-            />
-          </svg>
-        </span>
-      </li>
-      <li
-        class="flex items-center"
-        data-slot="base"
-        style="font-weight: bold;"
-      >
-        <span
-          aria-current="page"
-          aria-disabled="true"
-          class="flex gap-1 items-center whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small no-underline cursor-default transition-opacity text-foreground"
-          data-current="true"
-          data-slot="item"
-          role="link"
+            Services
+          </a>
+          <span
+            aria-hidden="true"
+            class="px-1 rtl:rotate-180 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center font-bold"
+          data-slot="base"
         >
-          Plumbing
-        </span>
-      </li>
-    </ol>
-  </nav>
+          <span
+            aria-current="page"
+            aria-disabled="true"
+            class="flex gap-1 items-center whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small no-underline cursor-default transition-opacity text-foreground"
+            data-current="true"
+            data-slot="item"
+            role="link"
+          >
+            Plumbing
+          </span>
+        </li>
+      </ol>
+    </nav>
+  </div>
 </DocumentFragment>
 `;

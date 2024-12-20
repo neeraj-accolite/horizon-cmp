@@ -15,6 +15,12 @@ Default.args = {
     { label: 'Home', href: '/' },
     { label: 'Services', href: '/services' },
     { label: 'Plumbing', href: '/plumbing' },
+    { label: 'Home1', href: '/' },
+    { label: 'Services1', href: '/services' },
+    { label: 'Plumbing1', href: '/plumbing' },
+    { label: 'Home2', href: '/' },
+    { label: 'Services2', href: '/services' },
+    { label: 'Plumbing2', href: '/plumbing' },
   ],
 };
 
