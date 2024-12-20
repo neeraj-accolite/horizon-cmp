@@ -1,22 +1,24 @@
 import React from 'react';
 import { ButtonProps } from './Button.model';
 import styles from './Button.module.scss';
+import { Button as ButtonComp } from '@nextui-org/button';
 
 const Button = ({
   label,
-  children,
-  disabled,
   onClick,
-  variant = 'primary',
+  color = 'primary',
+  ...rest
 }: ButtonProps) => {
   return (
-    <button
-      className={`${styles.button} ${styles[variant]}`}
-      onClick={onClick}
-      disabled={disabled}
+    <ButtonComp
+      {...rest}
+      disableAnimation={true}
+      className={`${styles.button} ${styles[color]}`}
+      onPress={onClick}
+      aria-label={label}
     >
-      {label ?? children}
-    </button>
+      {label}
+    </ButtonComp>
   );
 };
 
