@@ -1,17 +1,20 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from 'tailwindcss';
 import { nextui } from '@nextui-org/react';
+import { MultiTenantThemeProps } from '@theme-configs';
 const tenant = process.env.TENANT || 'horizon';
 
-let tenantTheme;
+let tenantTheme: MultiTenantThemeProps;
 try {
-  tenantTheme = require(`./tailwind-configs/${tenant}-tailwind.config.ts`);
+  tenantTheme = require(`./theme-configs/${tenant}-tailwind.config.ts`);
 } catch (err) {
   console.warn(
     `Horizon config is loaded, as Error in loading the provided tailwind config: ${err}`,
   );
-  tenantTheme = require(`./tailwind-configs/horizon-tailwind.config.ts`);
+  tenantTheme = require(`./theme-configs/horizon-tailwind.config.ts`);
 }
+
+// console.log('sfd ', { ...tenantTheme });
 
 export default {
   ...tenantTheme,
