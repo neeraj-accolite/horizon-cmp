@@ -7,7 +7,7 @@ exports[`MultiNodeAccordion matches snapshot 1`] = `
   >
     <div
       aria-label="Accordion"
-      class="px-2 w-full accordion-divider accordion-header accordion-body"
+      class="px-2 w-full"
       data-orientation="vertical"
     >
       <div
@@ -27,7 +27,7 @@ exports[`MultiNodeAccordion matches snapshot 1`] = `
                 class="text-foreground text-medium"
               >
                 <span
-                  class="font-inter text-[16px] font-bold leading-[24px]"
+                  class="text-base font-bold leading-6"
                 >
                   Accordion Item 1
                 </span>
@@ -72,7 +72,7 @@ exports[`MultiNodeAccordion matches snapshot 1`] = `
                 class="text-foreground text-medium"
               >
                 <span
-                  class="font-inter text-[16px] font-bold leading-[24px]"
+                  class="text-base font-bold leading-6"
                 >
                   Accordion Item 2
                 </span>
@@ -117,7 +117,7 @@ exports[`MultiNodeAccordion matches snapshot 1`] = `
                 class="text-foreground text-medium"
               >
                 <span
-                  class="font-inter text-[16px] font-bold leading-[24px]"
+                  class="text-base font-bold leading-6"
                 >
                   Accordion Item 3
                 </span>
