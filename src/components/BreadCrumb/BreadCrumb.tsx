@@ -18,7 +18,7 @@ const BreadCrumb: React.FC<BreadCrumbProps> = ({ items }) => {
         }}
         itemsAfterCollapse={items.length}
         itemsBeforeCollapse={items.length}
-        maxItems={items.length}
+        maxItems={2 * items.length}
       >
         {items.map((item, index) => (
           <BreadcrumbItem

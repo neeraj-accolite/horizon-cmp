@@ -4,7 +4,7 @@ import BreadCrumb from './BreadCrumb';
 import { BreadCrumbProps } from './BreadCrumb';
 import { render, screen } from '@testing-library/react';
 
-describe('BreadCrumb Component', () => {
+describe.only('BreadCrumb Component', () => {
   const renderComponent = (props: BreadCrumbProps) =>
     render(<BreadCrumb {...props} />);
 
@@ -67,5 +67,20 @@ describe('BreadCrumb Component', () => {
 
     const { asFragment } = render(<BreadCrumb items={items} />);
     expect(asFragment()).toMatchSnapshot();
+  });
+
+  test('last breadcrumb item should not be clickable', () => {
+    const items = [
+      { label: 'Home', href: '/' },
+      { label: 'Category', href: '/category' },
+      { label: 'Product' },
+    ];
+
+    render(<BreadCrumb items={items} />);
+
+    const lastItem = screen.getByText('Product');
+
+    // Check if the last breadcrumb item is not a link
+    expect(lastItem.closest('a')).toBeNull();
   });
 });
