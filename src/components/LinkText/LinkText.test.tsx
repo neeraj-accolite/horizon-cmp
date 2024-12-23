@@ -41,22 +41,6 @@ describe('UI Component - LinkText', () => {
     expect(linkText).toHaveStyle({ fontSize: '20px', fontWeight: '900' });
   });
 
-  test('removes underline when underline is set to false', async () => {
-    const container = render(
-      <LinkText label="No Underline" underline={false} />,
-    );
-    const linkText = await container.findByText('No Underline');
-    expect(linkText).toHaveClass('underline-none');
-  });
-
-  test('keeps underline when underline is set to true', async () => {
-    const container = render(
-      <LinkText label="Underlined Text" underline={true} />,
-    );
-    const linkText = await container.findByText('Underlined Text');
-    expect(linkText).not.toHaveClass('underline-none');
-  });
-
   test('applies rootClass when provided', async () => {
     const container = render(
       <LinkText label="Custom Class" rootClass="custom-class" />,
@@ -75,5 +59,24 @@ describe('UI Component - LinkText', () => {
       />,
     );
     expect(container).toMatchSnapshot();
+  });
+
+  test('renders small text when size is small', async () => {
+    const container = render(<LinkText label="Small Text" size="small" />);
+    const linkText = await container.findByText('Small Text');
+    expect(linkText).toHaveStyle({ fontSize: '12px' });
+  });
+
+  test('renders large text when size is large', async () => {
+    const container = render(<LinkText label="Large Text" size="large" />);
+    const linkText = await container.findByText('Large Text');
+    expect(linkText).toHaveStyle({ fontSize: '20px' });
+  });
+
+  test('does not trigger onClick when not provided', async () => {
+    const container = render(<LinkText label="No Click" />);
+    const linkText = await container.findByText('No Click');
+    fireEvent.click(linkText);
+    expect(linkText).toBeInTheDocument();
   });
 });

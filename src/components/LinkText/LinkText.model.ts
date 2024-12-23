@@ -6,7 +6,7 @@ export interface LinkTextProps {
   /**
    * Label for the Link Text
    */
-  label?: string;
+  label: string;
   /**
    * Label Color
    */
@@ -19,7 +19,6 @@ export interface LinkTextProps {
    * Font weight of the Link Text
    */
   fontWeight?: number;
-
   /**
    * To control underline under the text
    */

@@ -1,5 +1,6 @@
 import React from 'react';
 import { LinkTextProps } from './LinkText.model';
+import { Link } from '@nextui-org/link';
 import styles from './LinkText.module.scss';
 
 const LinkText = ({
@@ -10,6 +11,7 @@ const LinkText = ({
   size = 'medium',
   fontWeight = 700,
   underline = true,
+  ...rest
 }: LinkTextProps) => {
   const textStyle = {
     color: labelColor,
@@ -18,13 +20,16 @@ const LinkText = ({
   };
 
   return (
-    <p
+    <Link
+      {...rest}
       onClick={onClick}
       style={textStyle}
-      className={`${styles.text} ${!underline ? styles['underline-none'] : ''} ${rootClass || ''}`}
+      className={`${styles.text} ${rootClass || ''}`}
+      underline={underline ? 'always' : 'none'}
+      aria-label={label}
     >
       {label}
-    </p>
+    </Link>
   );
 };
 
