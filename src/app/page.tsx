@@ -1,10 +1,36 @@
 import { Button } from '@shared-components';
 import Image from 'next/image';
+import { horizonTheme, MultiTenantThemeProps } from '@theme-configs';
+import ColorPalette from 'libs/shared-components/ColorPalette/ColorPalette';
+import { ColorItemProps } from 'libs/shared-components/ColorPalette/ColorPalette.model';
+import ColorPaletteItem from 'libs/shared-components/ColorPalette/ColorPaletteItem';
 
 export default function Home() {
+  const getThemeColors = (theme: MultiTenantThemeProps) => {
+    const themeColors: ColorItemProps[] = [];
+    Object.entries(theme.extend.colors).forEach(([key, value]) => {
+      themeColors.push({
+        title: key,
+        colors: value,
+      });
+    });
+    return themeColors;
+  };
+
+  const theme = getThemeColors(horizonTheme);
+
   return (
     <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
       <Button label="Test Button" color="primary" />
+      <ColorPalette>
+        {theme.map((colorItem) => (
+          <ColorPaletteItem
+            key={colorItem.title}
+            title={colorItem.title}
+            colors={colorItem.colors}
+          />
+        ))}
+      </ColorPalette>
       <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
         <Image
           className="dark:invert"

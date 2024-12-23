@@ -15,7 +15,7 @@ const ColorPaletteBlock: React.FC<ColorPaletteBlockProps> = ({
       ></div>
     </div>
     <div>
-      <span className="text-red-600">{name}</span>
+      <span className="text-medium">{name}</span>
     </div>
     <div>
       <span className="text-sm">{color}</span>
