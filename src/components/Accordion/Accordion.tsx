@@ -25,7 +25,7 @@ export const AccordionComp: React.FC<AccordionProps> = ({
             key={index}
             aria-label={item.title}
             title={
-              <span className="text-base font-bold leading-[24px]">
+              <span className="text-base font-bold leading-6">
                 {item.title}
               </span>
             }
@@ -33,7 +33,7 @@ export const AccordionComp: React.FC<AccordionProps> = ({
               return <AccordionItemIndicator isOpen={props.isOpen || false} />;
             }}
           >
-            <div className="mb-3 text-[16px] font-normal leading-[24px]">
+            <div className="mb-3 text-base font-normal leading-6">
               {item.children && (
                 <div className="mt-0 p-0">
                   <ul className="mt-0 pl-0">{item.children}</ul>

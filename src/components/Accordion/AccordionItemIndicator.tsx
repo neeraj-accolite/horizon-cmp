@@ -6,7 +6,6 @@ const upArrow = '/upArrow.svg';
 
 interface AccordionItemIndicatorProps {
   isOpen: boolean;
-  isDisabled?: boolean;
 }
 
 const AccordionItemIndicator: React.FC<AccordionItemIndicatorProps> = ({
