@@ -1,13 +1,13 @@
 import React from 'react';
 import {
-  Accordion,
+  Accordion as AccordionComp,
   AccordionItem,
   AccordionItemIndicatorProps,
 } from '@nextui-org/accordion';
 import { AccordionProps } from './Accordion.model';
 import AccordionItemIndicator from './AccordionItemIndicator';
 
-export const AccordionComp: React.FC<AccordionProps> = ({
+const Accordion: React.FC<AccordionProps> = ({
   items,
   className,
   dividerColor = '#8E8C99',
@@ -15,7 +15,7 @@ export const AccordionComp: React.FC<AccordionProps> = ({
 }) => {
   return (
     <div className={`${className} rounded-lg p-4 shadow-md`}>
-      <Accordion
+      <AccordionComp
         aria-label="Accordion"
         showDivider={showSeparators}
         dividerProps={{ className: `bg-[${dividerColor}] h-0.5` }}
@@ -42,7 +42,9 @@ export const AccordionComp: React.FC<AccordionProps> = ({
             </div>
           </AccordionItem>
         ))}
-      </Accordion>
+      </AccordionComp>
     </div>
   );
 };
+
+export default Accordion;

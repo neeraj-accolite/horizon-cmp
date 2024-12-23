@@ -1,14 +1,14 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import { AccordionComp } from './Accordion';
+import Accordion from './Accordion';
 import { AccordionProps } from './Accordion.model';
 
 export default {
   title: 'Components/Accordion',
-  component: AccordionComp,
+  component: Accordion,
 } as Meta;
 
-const Template: StoryFn<AccordionProps> = (args) => <AccordionComp {...args} />;
+const Template: StoryFn<AccordionProps> = (args) => <Accordion {...args} />;
 
 export const SingleAccordion = Template.bind({});
 SingleAccordion.args = {
