@@ -9,8 +9,8 @@ export default {
 
 const Template: StoryFn<BreadCrumbProps> = (args) => <BreadCrumb {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {
+export const WithScroll = Template.bind({});
+WithScroll.args = {
   items: [
     { label: 'Home', href: '/' },
     { label: 'Services', href: '/services' },
@@ -21,10 +21,20 @@ Default.args = {
     { label: 'Home2', href: '/' },
     { label: 'Services2', href: '/services' },
     { label: 'Plumbing2', href: '/plumbing' },
+    { label: 'Home2', href: '/' },
+    { label: 'Services2', href: '/services' },
+    { label: 'Plumbing2', href: '/plumbing' },
+    { label: 'Home2', href: '/' },
+    { label: 'Services2', href: '/services' },
+    { label: 'Plumbing2', href: '/plumbing' },
   ],
 };
 
-export const WithoutLinks = Template.bind({});
-WithoutLinks.args = {
-  items: [{ label: 'Home' }, { label: 'Plumbing' }],
+export const WithSmallDataSet = Template.bind({});
+WithSmallDataSet.args = {
+  items: [
+    { label: 'Home', href: '/' },
+    { label: 'Services', href: '/services' },
+    { label: 'Plumbing', href: '/plumbing' },
+  ],
 };
