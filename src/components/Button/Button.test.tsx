@@ -34,4 +34,49 @@ describe('UI Component - Button', () => {
     );
     expect(container).toMatchSnapshot();
   });
+
+  test('apply labelColor as inline style when passed as a prop', async () => {
+    const labelColor = '#00ff00';
+    const container = render(
+      <Button label="Color Test" labelColor={labelColor} />,
+    );
+    const button = await container.findByText('Color Test');
+    expect(button).toHaveStyle({ color: `${labelColor}` });
+  });
+
+  test('apply borderColor as inline style when passed as a prop', async () => {
+    const borderColor = '#ff0000';
+    const container = render(
+      <Button
+        label="Border Test"
+        color="secondary"
+        borderColor={borderColor}
+      />,
+    );
+    const button = await container.findByText('Border Test');
+    expect(button).toHaveStyle({ 'border-color': `${borderColor}` });
+  });
+
+  test('apply fontWeight as inline style when passed as a prop', async () => {
+    const fontWeight = 800;
+    const container = render(
+      <Button label="Font Weight Test" fontWeight={fontWeight} />,
+    );
+    const button = await container.findByText('Font Weight Test');
+    expect(button).toHaveStyle({ 'font-weight': `${fontWeight}` });
+  });
+
+  test('apply correct default class based on color prop', async () => {
+    const container = render(
+      <Button label="Secondary Button" color="secondary" />,
+    );
+    const button = await container.findByText('Secondary Button');
+    expect(button).toHaveClass('secondary');
+  });
+
+  test('do not apply inline styles when optional props are not provided', async () => {
+    const container = render(<Button label="No Inline Styles" />);
+    const button = await container.findByText('No Inline Styles');
+    expect(button).not.toHaveAttribute('style');
+  });
 });
