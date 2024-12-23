@@ -7,24 +7,15 @@ const LinkText = ({
   label,
   onClick,
   rootClass,
-  labelColor = 'inherit',
-  size = 'medium',
-  fontWeight = 700,
   underline = true,
+  className = '',
   ...rest
 }: LinkTextProps) => {
-  const textStyle = {
-    color: labelColor,
-    fontWeight,
-    fontSize: size === 'small' ? '12px' : size === 'medium' ? '16px' : '20px',
-  };
-
   return (
     <Link
       {...rest}
       onClick={onClick}
-      style={textStyle}
-      className={`${styles.text} ${rootClass || ''}`}
+      className={`${styles.text} ${className} ${rootClass || ''}`}
       underline={underline ? 'always' : 'none'}
       aria-label={label}
     >

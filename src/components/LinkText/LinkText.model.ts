@@ -8,17 +8,9 @@ export interface LinkTextProps {
    */
   label: string;
   /**
-   * Label Color
+   * ClassName props for the LinkText
    */
-  labelColor?: string;
-  /**
-   * Button size
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
-   * Font weight of the Link Text
-   */
-  fontWeight?: number;
+  className?: string;
   /**
    * To control underline under the text
    */

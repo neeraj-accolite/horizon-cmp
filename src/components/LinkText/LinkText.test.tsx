@@ -4,79 +4,72 @@ import { render, fireEvent } from '@testing-library/react';
 import LinkText from './LinkText';
 
 describe('UI Component - LinkText', () => {
-  test('renders the LinkText component with default props', async () => {
-    const container = render(<LinkText label="Default LinkText" />);
-    const linkText = await container.findByText('Default LinkText');
+  test('renders the LinkText component with default props', () => {
+    const { getByText } = render(<LinkText label="Default LinkText" />);
+    const linkText = getByText('Default LinkText');
     expect(linkText).toBeInTheDocument();
-    expect(linkText).toHaveStyle({
-      color: 'inherit',
-      fontSize: '16px',
-      fontWeight: '700',
-    });
+    expect(linkText).toHaveClass('text');
+    expect(linkText).toHaveAttribute('aria-label', 'Default LinkText');
   });
 
-  test('onClick method is called when the LinkText is clicked', async () => {
-    const handleClick = jest.fn();
-    const container = render(
-      <LinkText label="Clickable Text" onClick={handleClick} />,
+  test('applies custom className and rootClass', () => {
+    const { getByText } = render(
+      <LinkText
+        label="Custom LinkText"
+        className="custom-class"
+        rootClass="root-class"
+      />,
     );
-    const linkText = await container.findByText('Clickable Text');
+    const linkText = getByText('Custom LinkText');
+    expect(linkText).toHaveClass('custom-class');
+    expect(linkText).toHaveClass('root-class');
+  });
+
+  test('calls onClick handler when clicked', () => {
+    const handleClick = jest.fn();
+    const { getByText } = render(
+      <LinkText label="Clickable Link" onClick={handleClick} />,
+    );
+    const linkText = getByText('Clickable Link');
     fireEvent.click(linkText);
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
-  test('applies custom labelColor correctly', async () => {
-    const container = render(
-      <LinkText label="Colored Text" labelColor="#1976d2" />,
+  test('does not apply underline class when underline is set to false', () => {
+    const { getByText } = render(
+      <LinkText label="No Underline" underline={false} />,
     );
-    const linkText = await container.findByText('Colored Text');
-    expect(linkText).toHaveStyle({ color: '#1976d2' });
+    const linkText = getByText('No Underline');
+    expect(linkText).not.toHaveClass('underline');
   });
 
-  test('renders with custom font size and weight', async () => {
-    const container = render(
-      <LinkText label="Large Bold Text" size="large" fontWeight={900} />,
+  test('applies underline class when underline is set to true', () => {
+    const { getByText } = render(
+      <LinkText label="Underlined Link" underline={true} />,
     );
-    const linkText = await container.findByText('Large Bold Text');
-    expect(linkText).toHaveStyle({ fontSize: '20px', fontWeight: '900' });
+    const linkText = getByText('Underlined Link');
+    expect(linkText).toHaveClass('underline');
   });
 
-  test('applies rootClass when provided', async () => {
-    const container = render(
-      <LinkText label="Custom Class" rootClass="custom-class" />,
+  test('applies correct hover and active styles', () => {
+    const { getByText } = render(
+      <LinkText label="Interactive Link" underline={true} />,
     );
-    const linkText = await container.findByText('Custom Class');
-    expect(linkText).toHaveClass('custom-class');
+    const linkText = getByText('Interactive Link');
+    expect(linkText).toHaveClass('hover:opacity-80', 'active:opacity-disabled');
   });
 
-  test('renders unchanged with default parameters', async () => {
-    const container = render(
-      <LinkText
-        label="Snapshot Test"
-        size="medium"
-        fontWeight={700}
-        underline={true}
-      />,
+  test('renders with additional props passed via rest', () => {
+    const { getByText } = render(
+      <LinkText label="Additional Props" data-testid="custom-link" />,
     );
+    const linkText = getByText('Additional Props');
+    expect(linkText).toHaveAttribute('data-testid', 'custom-link');
+    expect(linkText).toHaveAttribute('aria-label', 'Additional Props');
+  });
+
+  test('renders unchanged with default parameters (snapshot test)', () => {
+    const { container } = render(<LinkText label="Snapshot Test" />);
     expect(container).toMatchSnapshot();
-  });
-
-  test('renders small text when size is small', async () => {
-    const container = render(<LinkText label="Small Text" size="small" />);
-    const linkText = await container.findByText('Small Text');
-    expect(linkText).toHaveStyle({ fontSize: '12px' });
-  });
-
-  test('renders large text when size is large', async () => {
-    const container = render(<LinkText label="Large Text" size="large" />);
-    const linkText = await container.findByText('Large Text');
-    expect(linkText).toHaveStyle({ fontSize: '20px' });
-  });
-
-  test('does not trigger onClick when not provided', async () => {
-    const container = render(<LinkText label="No Click" />);
-    const linkText = await container.findByText('No Click');
-    fireEvent.click(linkText);
-    expect(linkText).toBeInTheDocument();
   });
 });
