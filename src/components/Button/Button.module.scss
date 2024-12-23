@@ -3,10 +3,9 @@
 }
 
 .primary {
-  @apply bg-blue-500 text-white hover:bg-blue-600; // No border for primary
+  @apply bg-primary text-white hover:bg-blue-600;
 }
 
 .secondary {
-  @apply bg-transparent border-2; // Default border styling
-  border-color: #6D6C76
+  @apply bg-primary text-white hover:bg-gray-600;
 }
