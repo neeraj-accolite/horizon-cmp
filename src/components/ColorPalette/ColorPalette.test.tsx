@@ -5,10 +5,14 @@ import ColorPalette from './ColorPalette';
 import { ColorItemProps } from './ColorPalette.model';
 import ColorPaletteItem from './ColorPaletteItem';
 
-const themeColors: ColorItemProps[] = [
+const themeWithColorPalette: ColorItemProps[] = [
   {
     title: 'red',
     colors: '#FF0000',
+  },
+  {
+    title: 'blue',
+    colors: '#0000FF',
   },
   {
     title: 'grey',
@@ -19,33 +23,50 @@ const themeColors: ColorItemProps[] = [
   },
 ];
 
-const ColorPaletteComponent = () => {
-  return (
-    <ColorPalette>
-      {themeColors.map((colorItem) => (
-        <ColorPaletteItem
-          key={colorItem.title}
-          title={colorItem.title}
-          colors={colorItem.colors}
-        />
-      ))}
-    </ColorPalette>
-  );
-};
-
 describe('Theme Component - Color Palette', () => {
-  test('render the Color palette with theme of single color and multiple colors ', async () => {
-    const container = render(<ColorPaletteComponent />);
-    themeColors.map(async (colorItem) => {
+  test('render the Color palette with theme for single and multiple color palette ', async () => {
+    const container = render(
+      <ColorPalette>
+        {themeWithColorPalette.map((colorItem) => (
+          <ColorPaletteItem
+            key={colorItem.title}
+            title={colorItem.title}
+            colors={colorItem.colors}
+          />
+        ))}
+      </ColorPalette>,
+    );
+    themeWithColorPalette.map(async (colorItem) => {
       const colorPaletteTitleComponent = await container.findByText(
         colorItem.title,
       );
       expect(colorPaletteTitleComponent).toBeInTheDocument();
+      if (typeof colorItem.colors === 'string') {
+        const colorValueComponent = await container.findByText(
+          colorItem.colors,
+        );
+        expect(colorValueComponent).toBeInTheDocument();
+      } else {
+        const colorValueComponent = await container.findByText(
+          colorItem.colors[0],
+        );
+        expect(colorValueComponent).toBeInTheDocument();
+      }
     });
   });
 
-  test('The Color Palette snapshot is matching with the existing one ', async () => {
-    const container = render(<ColorPaletteComponent />);
+  test('The Color Palette snapshot is generated successfully with multiple color palette ', async () => {
+    const container = render(
+      <ColorPalette>
+        {themeWithColorPalette.map((colorItem) => (
+          <ColorPaletteItem
+            key={colorItem.title}
+            title={colorItem.title}
+            colors={colorItem.colors}
+          />
+        ))}
+      </ColorPalette>,
+    );
     expect(container).toMatchSnapshot();
   });
 });

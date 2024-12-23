@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Theme Component - Color Palette The Color Palette snapshot is matching with the existing one  1`] = `
+exports[`Theme Component - Color Palette The Color Palette snapshot is generated successfully with multiple color palette  1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -40,6 +40,45 @@ exports[`Theme Component - Color Palette The Color Palette snapshot is matching 
                   class="text-sm"
                 >
                   #FF0000
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mb-1"
+        >
+          <div
+            class="my-4 text-xl font-bold"
+          >
+            blue
+          </div>
+          <div
+            class="flex content-center"
+          >
+            <div
+              class="mr-6 content-center justify-center text-center"
+            >
+              <div
+                class="flex content-center justify-center"
+              >
+                <div
+                  class="size-12 border border-solid border-black"
+                  style="background-color: rgb(0, 0, 255);"
+                />
+              </div>
+              <div>
+                <span
+                  class="text-medium"
+                >
+                  blue
+                </span>
+              </div>
+              <div>
+                <span
+                  class="text-sm"
+                >
+                  #0000FF
                 </span>
               </div>
             </div>
@@ -149,6 +188,45 @@ exports[`Theme Component - Color Palette The Color Palette snapshot is matching 
                 class="text-sm"
               >
                 #FF0000
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mb-1"
+      >
+        <div
+          class="my-4 text-xl font-bold"
+        >
+          blue
+        </div>
+        <div
+          class="flex content-center"
+        >
+          <div
+            class="mr-6 content-center justify-center text-center"
+          >
+            <div
+              class="flex content-center justify-center"
+            >
+              <div
+                class="size-12 border border-solid border-black"
+                style="background-color: rgb(0, 0, 255);"
+              />
+            </div>
+            <div>
+              <span
+                class="text-medium"
+              >
+                blue
+              </span>
+            </div>
+            <div>
+              <span
+                class="text-sm"
+              >
+                #0000FF
               </span>
             </div>
           </div>
