@@ -2,14 +2,9 @@ import React from 'react';
 import { ColorItemProps } from './ColorPalette.model';
 import ColorPaletteBlock from './ColorPaletteBlock';
 
-const ColorPaletteItem: React.FC<ColorItemProps> = ({
-  title,
-  subtitle,
-  colors,
-}) => (
+const ColorPaletteItem: React.FC<ColorItemProps> = ({ title, colors }) => (
   <div className="mb-1">
     <div className="my-4 text-xl font-bold">{title}</div>
-    {subtitle && <p>{subtitle}</p>}
     <div className="flex content-center">
       {typeof colors === 'string' ? (
         <ColorPaletteBlock name={title} color={colors} />

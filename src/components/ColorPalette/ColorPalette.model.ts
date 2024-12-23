@@ -2,7 +2,6 @@ import { ReactNode } from 'react';
 
 export interface ColorItemProps {
   title: string;
-  subtitle?: string;
   colors: Record<string, string> | string;
 }
 

@@ -1,0 +1,276 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Theme Component - Color Palette The Color Palette snapshot is matching with the existing one  1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <div
+          class="mb-1"
+        >
+          <div
+            class="my-4 text-xl font-bold"
+          >
+            red
+          </div>
+          <div
+            class="flex content-center"
+          >
+            <div
+              class="mr-6 content-center justify-center text-center"
+            >
+              <div
+                class="flex content-center justify-center"
+              >
+                <div
+                  class="size-12 border border-solid border-black"
+                  style="background-color: rgb(255, 0, 0);"
+                />
+              </div>
+              <div>
+                <span
+                  class="text-medium"
+                >
+                  red
+                </span>
+              </div>
+              <div>
+                <span
+                  class="text-sm"
+                >
+                  #FF0000
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mb-1"
+        >
+          <div
+            class="my-4 text-xl font-bold"
+          >
+            grey
+          </div>
+          <div
+            class="flex content-center"
+          >
+            <div
+              class="mr-6 content-center justify-center text-center"
+            >
+              <div
+                class="flex content-center justify-center"
+              >
+                <div
+                  class="size-12 border border-solid border-black"
+                  style="background-color: rgb(245, 245, 245);"
+                />
+              </div>
+              <div>
+                <span
+                  class="text-medium"
+                >
+                  grey-100
+                </span>
+              </div>
+              <div>
+                <span
+                  class="text-sm"
+                >
+                  #f5f5f5
+                </span>
+              </div>
+            </div>
+            <div
+              class="mr-6 content-center justify-center text-center"
+            >
+              <div
+                class="flex content-center justify-center"
+              >
+                <div
+                  class="size-12 border border-solid border-black"
+                  style="background-color: rgb(238, 238, 238);"
+                />
+              </div>
+              <div>
+                <span
+                  class="text-medium"
+                >
+                  grey-light
+                </span>
+              </div>
+              <div>
+                <span
+                  class="text-sm"
+                >
+                  #eeeeee
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <div
+        class="mb-1"
+      >
+        <div
+          class="my-4 text-xl font-bold"
+        >
+          red
+        </div>
+        <div
+          class="flex content-center"
+        >
+          <div
+            class="mr-6 content-center justify-center text-center"
+          >
+            <div
+              class="flex content-center justify-center"
+            >
+              <div
+                class="size-12 border border-solid border-black"
+                style="background-color: rgb(255, 0, 0);"
+              />
+            </div>
+            <div>
+              <span
+                class="text-medium"
+              >
+                red
+              </span>
+            </div>
+            <div>
+              <span
+                class="text-sm"
+              >
+                #FF0000
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mb-1"
+      >
+        <div
+          class="my-4 text-xl font-bold"
+        >
+          grey
+        </div>
+        <div
+          class="flex content-center"
+        >
+          <div
+            class="mr-6 content-center justify-center text-center"
+          >
+            <div
+              class="flex content-center justify-center"
+            >
+              <div
+                class="size-12 border border-solid border-black"
+                style="background-color: rgb(245, 245, 245);"
+              />
+            </div>
+            <div>
+              <span
+                class="text-medium"
+              >
+                grey-100
+              </span>
+            </div>
+            <div>
+              <span
+                class="text-sm"
+              >
+                #f5f5f5
+              </span>
+            </div>
+          </div>
+          <div
+            class="mr-6 content-center justify-center text-center"
+          >
+            <div
+              class="flex content-center justify-center"
+            >
+              <div
+                class="size-12 border border-solid border-black"
+                style="background-color: rgb(238, 238, 238);"
+              />
+            </div>
+            <div>
+              <span
+                class="text-medium"
+              >
+                grey-light
+              </span>
+            </div>
+            <div>
+              <span
+                class="text-sm"
+              >
+                #eeeeee
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
