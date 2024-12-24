@@ -13,11 +13,3 @@ export interface ColorPaletteBlockProps {
 export interface ColorPaletteProps {
   children: ReactNode;
 }
-
-export interface TailwindThemeColorProps {
-  extend: {
-    colors: {
-      [key: string]: Record<string, string> | string;
-    };
-  };
-}

@@ -1,18 +1,21 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
-import { theme as horizonTheme } from '../../../tailwind-configs/horizon-tailwind.config';
-import { theme as casteelTheme } from '../../../tailwind-configs/casteel-tailwind.config';
-import { theme as goldMedalTheme } from '../../../tailwind-configs/gold-medal-tailwind.config';
-import { ColorItemProps, TailwindThemeColorProps } from './ColorPalette.model';
+import { ColorItemProps } from './ColorPalette.model';
 import ColorPalette from './ColorPalette';
 import ColorPaletteItem from './ColorPaletteItem';
+import {
+  MultiTenantThemeProps,
+  horizonTheme,
+  casteelTheme,
+  goldMedalTheme,
+} from '@theme-configs';
 
 export default {
   title: 'Theme/ColorPalette',
   component: ColorPalette,
 } as Meta;
 
-const getThemeColors = (theme: TailwindThemeColorProps) => {
+const getThemeColors = (theme: MultiTenantThemeProps) => {
   const themeColors: ColorItemProps[] = [];
   Object.entries(theme.extend.colors).forEach(([key, value]) => {
     themeColors.push({
