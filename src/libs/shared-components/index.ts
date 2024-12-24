@@ -4,15 +4,16 @@ import { Button } from './Button';
 import { Card } from './Card';
 import { Link } from './Link';
 import { LinkText } from './LinkText';
-import {
-  CardMembership,
-  ChevronRight,
-  DownArrow,
-  LocalOffer,
-  Star,
-  UpArrow,
-  UserAvatar,
-} from './Icons';
+// import {
+//   CardMembership,
+//   ChevronRight,
+//   DownArrow,
+//   LocalOffer,
+//   Star,
+//   UpArrow,
+//   UserAvatar,
+// } from './Icons';
+import * as Icons from './Icons';
 import ArrowLeft from './Icons/IconList/ArrowLeft';
 
 export {
@@ -21,13 +22,7 @@ export {
   BreadCrumb,
   Card,
   ArrowLeft,
-  CardMembership,
-  ChevronRight,
-  DownArrow,
-  LocalOffer,
-  Star,
-  UpArrow,
-  UserAvatar,
+  Icons,
   Link,
   LinkText,
 };

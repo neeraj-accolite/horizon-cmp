@@ -11,7 +11,7 @@ import CardMembership from './IconList/CardMembership';
 import UpArrow from './IconList/UpArrow';
 
 export default {
-  title: 'Icons',
+  title: 'Components/Icons',
   component: ChevronRight,
   argTypes: {
     fill: { control: 'color' },
@@ -25,35 +25,35 @@ const Template: StoryFn<IconProps> = (args) => (
   <div className="flex flex-wrap gap-4">
     <div className="flex flex-col items-center">
       <ChevronRight {...args} />
-      <div>ChevronRight</div>
+      <div className="m-2">ChevronRight</div>
     </div>
     <div className="flex flex-col items-center">
       <Star {...args} />
-      <div>StarIcon</div>
+      <div className="m-2">StarIcon</div>
     </div>
     <div className="flex flex-col items-center">
       <UserAvatar {...args} />
-      <div>UserAvatar</div>
+      <div className="m-2">UserAvatar</div>
     </div>
     <div className="flex flex-col items-center">
       <DownArrow {...args} />
-      <div>DownArrow</div>
+      <div className="m-2">DownArrow</div>
     </div>
     <div className="flex flex-col items-center">
       <ArrowLeft {...args} />
-      <div>ArrowLeft</div>
+      <div className="m-2">ArrowLeft</div>
     </div>
     <div className="flex flex-col items-center">
       <UpArrow {...args} />
-      <div>UpArrow</div>
+      <div className="m-2">UpArrow</div>
     </div>
     <div className="flex flex-col items-center">
       <LocalOffer {...args} />
-      <div>LocalOffer</div>
+      <div className="m-2">LocalOffer</div>
     </div>
     <div className="flex flex-col items-center">
       <CardMembership {...args} />
-      <div>CardMembership</div>
+      <div className="m-2">CardMembership</div>
     </div>
   </div>
 );
@@ -61,5 +61,5 @@ const Template: StoryFn<IconProps> = (args) => (
 export const AllIcons = Template.bind({});
 AllIcons.args = {
   fill: 'currentColor',
-  size: 24,
+  size: 48,
 };
