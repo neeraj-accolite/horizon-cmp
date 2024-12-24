@@ -42,12 +42,8 @@ exports[`MultiNodeAccordion matches snapshot 1`] = `
               >
                 <img
                   alt="Arrow Icon"
-                  data-nimg="1"
-                  decoding="async"
                   height="16"
-                  loading="lazy"
                   src="/downArrow.svg"
-                  style="color: transparent;"
                   width="16"
                 />
               </div>
@@ -87,12 +83,8 @@ exports[`MultiNodeAccordion matches snapshot 1`] = `
               >
                 <img
                   alt="Arrow Icon"
-                  data-nimg="1"
-                  decoding="async"
                   height="16"
-                  loading="lazy"
                   src="/downArrow.svg"
-                  style="color: transparent;"
                   width="16"
                 />
               </div>
@@ -132,12 +124,8 @@ exports[`MultiNodeAccordion matches snapshot 1`] = `
               >
                 <img
                   alt="Arrow Icon"
-                  data-nimg="1"
-                  decoding="async"
                   height="16"
-                  loading="lazy"
                   src="/downArrow.svg"
-                  style="color: transparent;"
                   width="16"
                 />
               </div>
