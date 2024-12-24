@@ -38,6 +38,12 @@ export const theme: MultiTenantThemeProps = {
         'current-page-color': '#222222',
         'current-page-color2': '#222222',
       },
+      carousel: {
+        'prev-btn': '#d9d9d9',
+        'dot-btn': '#8e8c99',
+        'dot-btn-active': '#3f3e46',
+        arrow: '#0a0a16',
+      },
     },
   },
 };
