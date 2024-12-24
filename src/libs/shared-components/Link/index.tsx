@@ -1,3 +1,3 @@
-export { default as LinkComp } from './LinkComp';
+export { default as Link } from './Link';
 
-export type { LinkProps } from './LinkComp.model';
+export type { LinkProps } from './Link.model';

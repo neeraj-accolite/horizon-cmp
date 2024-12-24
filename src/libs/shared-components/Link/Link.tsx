@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { Link as NextUiLink } from '@nextui-org/link'; // Alias the Link component
-import { LinkProps } from './LinkComp.model';
+import { LinkProps } from './Link.model';
 
-const LinkComp: React.FC<LinkProps> = ({
+const Link: React.FC<LinkProps> = ({
   href,
   className = '',
   underline = 'none',
@@ -23,4 +23,4 @@ const LinkComp: React.FC<LinkProps> = ({
   );
 };
 
-export default LinkComp;
+export default Link;

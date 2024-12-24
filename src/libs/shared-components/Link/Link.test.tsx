@@ -1,6 +1,6 @@
 import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import LinkComp from './LinkComp';
+import LinkComp from './Link';
 
 describe('LinkComp', () => {
   test('renders link with correct href', () => {

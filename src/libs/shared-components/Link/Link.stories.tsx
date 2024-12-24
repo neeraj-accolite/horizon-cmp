@@ -1,14 +1,14 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import LinkComp from './LinkComp';
+import Link from './Link';
 
 export default {
-  title: 'Components/LinkComp',
-  component: LinkComp,
+  title: 'Components/Link',
+  component: Link,
   parameters: { layout: 'centered' },
-} as Meta<typeof LinkComp>;
+} as Meta<typeof Link>;
 
-type Story = StoryObj<typeof LinkComp>;
+type Story = StoryObj<typeof Link>;
 
 export const DefaultLink: Story = {
   args: {
@@ -78,8 +78,8 @@ export const LinkWithNestedLinks: Story = {
     href: '#',
     children: (
       <div className="flex flex-col space-y-2">
-        <LinkComp href="#">First Nested Link</LinkComp>
-        <LinkComp href="#">Second Nested Link</LinkComp>
+        <Link href="#">First Nested Link</Link>
+        <Link href="#">Second Nested Link</Link>
       </div>
     ),
     underline: 'always',
