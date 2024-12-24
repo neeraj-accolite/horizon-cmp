@@ -21,9 +21,6 @@ SingleAccordion.args = {
           <li>Child Item 2</li>
         </ul>
       ),
-      isOpen: false,
-      disabled: false,
-      onClick: () => console.log('Single Accordion Item clicked'),
     },
   ],
   height: 'auto',
@@ -44,9 +41,6 @@ MultiNodeAccordion.args = {
           <li>Child Item 2</li>
         </ul>
       ),
-      isOpen: false,
-      disabled: false,
-      onClick: () => console.log('Accordion Item 1 clicked'),
     },
     {
       title: 'Accordion Item 2',
@@ -56,10 +50,6 @@ MultiNodeAccordion.args = {
           <li>Child Item 2</li>
         </ul>
       ),
-      isOpen: false,
-      icon: <span>🔽</span>,
-      disabled: false,
-      onClick: () => console.log('Accordion Item 2 clicked'),
     },
     {
       title: 'Accordion Item 3',
@@ -69,10 +59,6 @@ MultiNodeAccordion.args = {
           <li>Child Item 2</li>
         </ul>
       ),
-      isOpen: false,
-      icon: <span>🔽</span>,
-      disabled: false,
-      onClick: () => console.log('Accordion Item 3 clicked'),
     },
   ],
   height: 'auto',
