@@ -25,6 +25,22 @@ describe('Icons', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('renders LocalOffer icon with default size when size prop is not provided', () => {
+    const { getByTestId } = render(<LocalOffer fill="currentColor" />);
+    const icon = getByTestId('local-offer-icon');
+    expect(icon).toHaveAttribute('height', '24');
+    expect(icon).toHaveAttribute('width', '24');
+  });
+
+  it('renders LocalOffer icon with provided size', () => {
+    const { getByTestId } = render(
+      <LocalOffer fill="currentColor" size={32} />,
+    );
+    const icon = getByTestId('local-offer-icon');
+    expect(icon).toHaveAttribute('height', '32');
+    expect(icon).toHaveAttribute('width', '32');
+  });
+
   it('renders LocalOffer icon with filled prop true', () => {
     const { container } = render(
       <LocalOffer fill="currentColor" filled={true} size={24} />,
@@ -95,18 +111,20 @@ describe('Icons', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('renders CardMembership icon with filled prop true', () => {
-    const { container } = render(
-      <CardMembership fill="currentColor" filled={true} size={24} />,
-    );
-    expect(container).toMatchSnapshot();
+  it('renders CardMembership icon with default size when size prop is not provided', () => {
+    const { getByTestId } = render(<CardMembership fill="currentColor" />);
+    const icon = getByTestId('card-membership-icon');
+    expect(icon).toHaveAttribute('height', '24');
+    expect(icon).toHaveAttribute('width', '24');
   });
 
-  it('renders CardMembership icon with filled prop false', () => {
-    const { container } = render(
-      <CardMembership fill="currentColor" filled={false} size={24} />,
+  it('renders CardMembership icon with provided size', () => {
+    const { getByTestId } = render(
+      <CardMembership fill="currentColor" size={32} />,
     );
-    expect(container).toMatchSnapshot();
+    const icon = getByTestId('card-membership-icon');
+    expect(icon).toHaveAttribute('height', '32');
+    expect(icon).toHaveAttribute('width', '32');
   });
 
   it('renders UpArrow icon with filled prop true', () => {

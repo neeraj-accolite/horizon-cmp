@@ -5,17 +5,15 @@ const Star: React.FC<IconProps> = ({
   fill = 'currentColor',
   filled,
   size,
-  height,
-  width,
   ...props
 }) => {
   return (
     <svg
       data-testid="star-icon"
       fill={filled ? fill : 'none'}
-      height={height || size || 16}
+      height={size || 16}
       viewBox="0 0 16 16"
-      width={width || size || 16}
+      width={size || 16}
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >

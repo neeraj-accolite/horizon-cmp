@@ -5,17 +5,15 @@ const UpArrow: React.FC<IconProps> = ({
   fill = 'currentColor',
   filled,
   size,
-  height,
-  width,
   ...props
 }) => {
   return (
     <svg
       data-testid="up-arrow-icon"
       fill="none"
-      height={height || size || 25}
+      height={size || 25}
       viewBox="0 0 25 25"
-      width={width || size || 25}
+      width={size || 25}
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >

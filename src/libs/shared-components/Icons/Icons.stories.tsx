@@ -16,45 +16,41 @@ export default {
   argTypes: {
     fill: { control: 'color' },
     size: { control: 'number' },
-    height: { control: 'number' },
-    width: { control: 'number' },
   },
 } as Meta;
 
+const icons = [
+  { component: ChevronRight, name: 'ChevronRight' },
+  { component: Star, name: 'StarIcon' },
+  { component: UserAvatar, name: 'UserAvatar' },
+  { component: DownArrow, name: 'DownArrow' },
+  { component: ArrowLeft, name: 'ArrowLeft' },
+  { component: UpArrow, name: 'UpArrow' },
+  { component: LocalOffer, name: 'LocalOffer' },
+  { component: CardMembership, name: 'CardMembership' },
+];
+
+interface IconDisplayProps extends IconProps {
+  IconComponent: React.ComponentType<IconProps>;
+  name: string;
+}
+
+const IconDisplay: React.FC<IconDisplayProps> = ({
+  IconComponent,
+  name,
+  ...args
+}: IconDisplayProps) => (
+  <div className="flex flex-col items-center">
+    <IconComponent {...args} />
+    <div className="m-2">{name}</div>
+  </div>
+);
+
 const Template: StoryFn<IconProps> = (args) => (
   <div className="flex flex-wrap gap-4">
-    <div className="flex flex-col items-center">
-      <ChevronRight {...args} />
-      <div className="m-2">ChevronRight</div>
-    </div>
-    <div className="flex flex-col items-center">
-      <Star {...args} />
-      <div className="m-2">StarIcon</div>
-    </div>
-    <div className="flex flex-col items-center">
-      <UserAvatar {...args} />
-      <div className="m-2">UserAvatar</div>
-    </div>
-    <div className="flex flex-col items-center">
-      <DownArrow {...args} />
-      <div className="m-2">DownArrow</div>
-    </div>
-    <div className="flex flex-col items-center">
-      <ArrowLeft {...args} />
-      <div className="m-2">ArrowLeft</div>
-    </div>
-    <div className="flex flex-col items-center">
-      <UpArrow {...args} />
-      <div className="m-2">UpArrow</div>
-    </div>
-    <div className="flex flex-col items-center">
-      <LocalOffer {...args} />
-      <div className="m-2">LocalOffer</div>
-    </div>
-    <div className="flex flex-col items-center">
-      <CardMembership {...args} />
-      <div className="m-2">CardMembership</div>
-    </div>
+    {icons.map(({ component, name }) => (
+      <IconDisplay key={name} IconComponent={component} name={name} {...args} />
+    ))}
   </div>
 );
 
