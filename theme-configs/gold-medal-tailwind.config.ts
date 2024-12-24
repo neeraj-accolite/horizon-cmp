@@ -1,8 +1,10 @@
-export const theme = {
+import { MultiTenantThemeProps } from '.';
+
+export const theme: MultiTenantThemeProps = {
   extend: {
     colors: {
-      primary: '#be1e2d',
-      secondary: '#3654a5',
+      primary: '#fff200',
+      secondary: '#0056a3',
       accent: '#00ff00',
       error: '#ff0000',
       warning: '#0d2bac',
