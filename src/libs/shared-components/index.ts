@@ -2,6 +2,8 @@ import { Accordion } from './Accordion';
 import { BreadCrumb } from './BreadCrumb';
 import { Button } from './Button';
 import { Card } from './Card';
+import { Link } from './Link';
+import { LinkText } from './LinkText';
 import {
   CardMembership,
   ChevronRight,
@@ -26,4 +28,6 @@ export {
   Star,
   UpArrow,
   UserAvatar,
+  Link,
+  LinkText,
 };
