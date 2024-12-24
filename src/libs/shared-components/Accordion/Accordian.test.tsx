@@ -45,12 +45,26 @@ jest.mock('next/image', () => ({
 
 describe('MultiNodeAccordion', () => {
   test('matches snapshot', () => {
-    const { asFragment } = render(<Accordion items={items} />);
+    const { asFragment } = render(
+      <Accordion items={items}>
+        <ul>
+          <li>Child Item 1</li>
+          <li>Child Item 2</li>
+        </ul>
+      </Accordion>,
+    );
     expect(asFragment()).toMatchSnapshot();
   });
 
   test('renders all accordion items', () => {
-    render(<Accordion items={items} />);
+    render(
+      <Accordion items={items}>
+        <ul>
+          <li>Child Item 1</li>
+          <li>Child Item 2</li>
+        </ul>
+      </Accordion>,
+    );
     items.forEach((item) => {
       expect(screen.getByText(item.title)).toBeInTheDocument();
     });

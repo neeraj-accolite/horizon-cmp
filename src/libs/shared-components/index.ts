@@ -4,5 +4,16 @@ import { Button } from './Button';
 import { Card } from './Card';
 import { Link } from './Link';
 import { LinkText } from './LinkText';
+import * as Icons from './Icons';
+import ArrowLeft from './Icons/IconList/ArrowLeft';
 
-export { Accordion, Button, BreadCrumb, Card, Link, LinkText };
+export {
+  Accordion,
+  Button,
+  BreadCrumb,
+  Card,
+  ArrowLeft,
+  Icons,
+  Link,
+  LinkText,
+};

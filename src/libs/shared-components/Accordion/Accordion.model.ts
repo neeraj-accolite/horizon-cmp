@@ -1,8 +1,9 @@
 import { AccordionProps as NextUIAccordionProps } from '@nextui-org/react';
+import { JSXElementConstructor, ReactElement } from 'react';
 
 export interface AccordionItem {
   title: string;
-  children?: React.ReactNode[];
+  children?: ReactElement<unknown, string | JSXElementConstructor<unknown>>;
 }
 
 export interface AccordionProps extends NextUIAccordionProps {
