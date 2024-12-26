@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Component matches snapshot with children only 1`] = `
+<DocumentFragment>
+  <div>
+    <div>
+      Child Component
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Card Component matches snapshot with custom styles 1`] = `
+<DocumentFragment>
+  <div
+    style="border-color: #ff5733; background-color: rgb(199, 0, 57); border-radius: 16px; padding: 2rem; color: rgb(255, 255, 255);"
+  >
+    <div>
+      Custom Styled Child Component
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Card Component matches snapshot with default styles 1`] = `
+<DocumentFragment>
+  <div
+    style="border-color: #d9d9d9; background-color: rgb(245, 246, 246); border-radius: 8px; padding: 1rem;"
+  >
+    <div>
+      Default Child Component
+    </div>
+  </div>
+</DocumentFragment>
+`;
