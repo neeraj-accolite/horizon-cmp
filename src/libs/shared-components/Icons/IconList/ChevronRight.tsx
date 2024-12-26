@@ -5,17 +5,15 @@ const ChevronRight: React.FC<IconProps> = ({
   fill = 'currentColor',
   filled,
   size,
-  height,
-  width,
   ...props
 }) => {
   return (
     <svg
       data-testid="chevron-right-icon"
       fill={filled ? fill : 'none'}
-      height={height || size || 25}
+      height={size || 25}
       viewBox="0 0 24 25"
-      width={width || size || 24}
+      width={size || 24}
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
