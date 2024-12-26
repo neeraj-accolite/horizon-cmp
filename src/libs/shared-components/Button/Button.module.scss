@@ -1,0 +1,11 @@
+.button {
+  @apply rounded px-4 py-2 text-sm font-bold;
+}
+
+.primary {
+  @apply bg-primary text-white hover:bg-blue-600;
+}
+
+.secondary {
+  @apply bg-primary text-white hover:bg-gray-600;
+}

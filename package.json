@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "cross-env TENANT=horizon next dev --turbopack",
+    "dev:casteel": "cross-env TENANT=casteel next dev --turbopack",
+    "dev:goldmedal": "cross-env TENANT=gold-medal next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "format": "prettier --check .",
@@ -24,7 +26,9 @@
     ]
   },
   "dependencies": {
+    "@nextui-org/react": "^2.6.8",
     "@storybook/react": "^8.4.7",
+    "framer-motion": "^11.15.0",
     "next": "15.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -45,6 +49,7 @@
     "@typescript-eslint/eslint-plugin": "^8.18.1",
     "@typescript-eslint/parser": "^8.18.1",
     "autoprefixer": "^10.4.20",
+    "cross-env": "^7.0.3",
     "eslint": "^9",
     "eslint-config-next": "15.1.0",
     "eslint-config-prettier": "^9.1.0",
@@ -54,7 +59,7 @@
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "lint-staged": "^15.2.11",
-    "postcss": "^8.4.49",
+    "postcss": ">=8.4.31",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "sass": "^1.83.0",

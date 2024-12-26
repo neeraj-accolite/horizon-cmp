@@ -12,7 +12,7 @@ type Story = StoryObj<typeof Button>;
 export const Primary: Story = {
   args: {
     label: 'Primary Button',
-    variant: 'primary',
+    color: 'primary',
     onClick: () => console.log('Primary button is clicked'),
     disabled: false,
   },
@@ -21,7 +21,7 @@ export const Primary: Story = {
 export const Secondary: Story = {
   args: {
     label: 'Secondary Button',
-    variant: 'secondary',
+    color: 'secondary',
     onClick: () => console.log('Secondary button is clicked'),
     disabled: false,
   },
