@@ -6,28 +6,44 @@ import {
 } from '@nextui-org/accordion';
 import { AccordionProps } from './Accordion.model';
 import AccordionItemIndicator from './AccordionItemIndicator';
+import Image from 'next/image';
 
 const Accordion: React.FC<AccordionProps> = ({
   items,
   className,
-  dividerColor = '#8E8C99',
-  showSeparators = false,
+  dividerColor,
+  vector,
+  showSeparators = true,
 }) => {
   return (
-    <div className={`${className} rounded-lg p-4 shadow-md`}>
+    <div className={`${className} rounded-lg px-4 py-8 shadow-md`}>
       <AccordionComp
         aria-label="Accordion"
         showDivider={showSeparators}
-        dividerProps={{ className: `bg-[${dividerColor}] h-0.5` }}
+        dividerProps={{
+          className: '!border !border-solid h-px',
+          style: { borderColor: dividerColor || '#8E8C99' },
+        }}
       >
         {items.map((item, index) => (
           <AccordionItem
             key={index}
             aria-label={item.title}
             title={
-              <span className="text-base font-bold leading-6">
-                {item.title}
-              </span>
+              <div className="flex items-center pb-2 pt-4">
+                {vector && (
+                  <Image
+                    src="/plumbing_vector.svg"
+                    alt="Icon"
+                    width={24}
+                    height={24}
+                    className="mr-2"
+                  />
+                )}
+                <span className="text-base font-bold leading-6">
+                  {item.title}
+                </span>
+              </div>
             }
             indicator={(props: AccordionItemIndicatorProps) => {
               return <AccordionItemIndicator isOpen={props.isOpen || false} />;

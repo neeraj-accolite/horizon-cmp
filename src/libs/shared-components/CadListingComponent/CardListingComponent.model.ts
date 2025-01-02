@@ -3,7 +3,8 @@ import { ReactNode } from 'react';
 export interface CardProps {
   title: ReactNode;
   children: React.ReactNode;
-  style?: React.CSSProperties;
+  className?: string;
+  links?: { text: string; url: string }[];
 }
 
 export interface CardListingComponentProps {

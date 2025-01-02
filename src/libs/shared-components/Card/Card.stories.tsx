@@ -14,22 +14,11 @@ const Template: StoryFn<CardProps> = (args) => <Card {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   children: <div>Default Child Component</div>,
-  style: {
-    borderColor: '#D9D9D9',
-    backgroundColor: '#F5F6F6',
-    borderRadius: '8px',
-    padding: '1rem',
-  },
+  className: 'border border-gray-300 bg-gray-100 rounded-lg p-4',
 };
 
 export const CustomStyle = Template.bind({});
 CustomStyle.args = {
   children: <div>Custom Styled Child Component</div>,
-  style: {
-    borderColor: '#FF5733',
-    backgroundColor: '#C70039',
-    borderRadius: '16px',
-    padding: '2rem',
-    color: '#FFFFFF',
-  },
+  className: 'border border-red-500 bg-red-700 rounded-xl p-8 text-white',
 };

@@ -24,12 +24,8 @@ Default.args = {
           maintenance, and full installation services.
         </div>
       ),
-      style: {
-        borderColor: '#D9D9D9',
-        borderWidth: '1px',
-        borderRadius: '8px',
-        borderStyle: 'solid',
-      },
+      className: 'border border-gray-300 rounded-lg',
+      links: [{ text: 'View Water Heaters Services', url: '/water-heaters' }],
     },
     {
       title: 'Kitchen & Bathroom',
@@ -40,12 +36,10 @@ Default.args = {
           come.
         </div>
       ),
-      style: {
-        borderColor: '#D9D9D9',
-        borderWidth: '1px',
-        borderRadius: '8px',
-        borderStyle: 'solid',
-      },
+      className: 'border border-gray-300 rounded-lg',
+      links: [
+        { text: 'View Kitchen & Bathroom Services', url: '/water-heaters' },
+      ],
     },
     {
       title: 'Water Lines',
@@ -55,12 +49,8 @@ Default.args = {
           your mop for our water line repair and replacement services.
         </div>
       ),
-      style: {
-        borderColor: '#D9D9D9',
-        borderWidth: '1px',
-        borderRadius: '8px',
-        borderStyle: 'solid',
-      },
+      className: 'border border-gray-300 rounded-lg',
+      links: [{ text: 'View Water Lines Services', url: '/water-heaters' }],
     },
     {
       title: 'Drains & Sewer Lines',
@@ -70,12 +60,10 @@ Default.args = {
           line issue, our team is here to help.
         </div>
       ),
-      style: {
-        borderColor: '#D9D9D9',
-        borderWidth: '1px',
-        borderRadius: '8px',
-        borderStyle: 'solid',
-      },
+      className: 'border border-gray-300 rounded-lg',
+      links: [
+        { text: 'View Drains & Sewer Lines Services', url: '/water-heaters' },
+      ],
     },
     {
       title: 'Gas Lines',
@@ -85,12 +73,8 @@ Default.args = {
           your gas lines are in safe working order.
         </div>
       ),
-      style: {
-        borderColor: '#D9D9D9',
-        borderWidth: '1px',
-        borderRadius: '8px',
-        borderStyle: 'solid',
-      },
+      className: 'border border-gray-300 rounded-lg',
+      links: [{ text: 'View Gas Lines Services', url: '/water-heaters' }],
     },
     {
       title: 'Sump Pumps',
@@ -100,12 +84,8 @@ Default.args = {
           your home stays dry, no matter the weather outside.
         </div>
       ),
-      style: {
-        borderColor: '#D9D9D9',
-        borderWidth: '1px',
-        borderRadius: '8px',
-        borderStyle: 'solid',
-      },
+      className: 'border border-gray-300 rounded-lg',
+      links: [{ text: 'View Sump Pumps Services', url: '/water-heaters' }],
     },
     {
       title: 'Well Pumps',
@@ -116,12 +96,8 @@ Default.args = {
           help.
         </div>
       ),
-      style: {
-        borderColor: '#D9D9D9',
-        borderWidth: '1px',
-        borderRadius: '8px',
-        borderStyle: 'solid',
-      },
+      className: 'border border-gray-300 rounded-lg',
+      links: [{ text: 'View Well Pumps Services', url: '/water-heaters' }],
     },
     {
       title: 'Water Treatment',
@@ -132,12 +108,8 @@ Default.args = {
           help.
         </div>
       ),
-      style: {
-        borderColor: '#D9D9D9',
-        borderWidth: '1px',
-        borderRadius: '8px',
-        borderStyle: 'solid',
-      },
+      className: 'border border-gray-300 rounded-lg',
+      links: [{ text: 'View Water Treatment Services', url: '/water-heaters' }],
     },
   ],
 };

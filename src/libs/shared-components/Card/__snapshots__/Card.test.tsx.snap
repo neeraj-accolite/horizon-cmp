@@ -2,7 +2,9 @@
 
 exports[`Card Component matches snapshot with children only 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    class=""
+  >
     <div>
       Child Component
     </div>
@@ -13,7 +15,7 @@ exports[`Card Component matches snapshot with children only 1`] = `
 exports[`Card Component matches snapshot with custom styles 1`] = `
 <DocumentFragment>
   <div
-    style="border-color: #ff5733; background-color: rgb(199, 0, 57); border-radius: 16px; padding: 2rem; color: rgb(255, 255, 255);"
+    class="rounded-xl border border-red-500 bg-red-700 p-8 text-white"
   >
     <div>
       Custom Styled Child Component
@@ -25,7 +27,7 @@ exports[`Card Component matches snapshot with custom styles 1`] = `
 exports[`Card Component matches snapshot with default styles 1`] = `
 <DocumentFragment>
   <div
-    style="border-color: #d9d9d9; background-color: rgb(245, 246, 246); border-radius: 8px; padding: 1rem;"
+    class="rounded-lg border border-gray-300 bg-gray-100 p-4"
   >
     <div>
       Default Child Component

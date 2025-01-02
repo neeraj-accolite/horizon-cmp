@@ -6,45 +6,28 @@ import { Card } from './Card';
 describe('Card Component', () => {
   test('renders with default styles', () => {
     const { getByText } = render(
-      <Card
-        style={{
-          borderColor: '#D9D9D9',
-          backgroundColor: '#F5F6F6',
-          borderRadius: '8px',
-          padding: '1rem',
-        }}
-      >
+      <Card className="rounded-lg border border-gray-300 bg-gray-100 p-4">
         <div>Default Child Component</div>
       </Card>,
     );
     const childElement = getByText('Default Child Component');
     expect(childElement).toBeInTheDocument();
-    expect(childElement.parentElement).toHaveStyle('borderColor: #D9D9D9');
-    expect(childElement.parentElement).toHaveStyle('backgroundColor: #F5F6F6');
-    expect(childElement.parentElement).toHaveStyle('borderRadius: 8px');
-    expect(childElement.parentElement).toHaveStyle('padding: 1rem');
+    expect(childElement.parentElement).toHaveClass(
+      'border border-gray-300 bg-gray-100 rounded-lg p-4',
+    );
   });
 
   test('renders with custom styles', () => {
     const { getByText } = render(
-      <Card
-        style={{
-          borderColor: '#FF5733',
-          backgroundColor: '#C70039',
-          borderRadius: '16px',
-          padding: '2rem',
-          color: '#FFFFFF',
-        }}
-      >
+      <Card className="rounded-xl border border-red-500 bg-red-700 p-8 text-white">
         <div>Custom Styled Child Component</div>
       </Card>,
     );
     const childElement = getByText('Custom Styled Child Component');
     expect(childElement).toBeInTheDocument();
-    expect(childElement.parentElement).toHaveStyle('borderColor: #FF5733');
-    expect(childElement.parentElement).toHaveStyle('backgroundColor: #C70039');
-    expect(childElement.parentElement).toHaveStyle('borderRadius: 16px');
-    expect(childElement.parentElement).toHaveStyle('padding: 2rem');
+    expect(childElement.parentElement).toHaveClass(
+      'border border-red-500 bg-red-700 rounded-xl p-8 text-white',
+    );
   });
 
   test('renders children correctly', () => {
@@ -59,14 +42,7 @@ describe('Card Component', () => {
 
   test('matches snapshot with default styles', () => {
     const { asFragment } = render(
-      <Card
-        style={{
-          borderColor: '#D9D9D9',
-          backgroundColor: '#F5F6F6',
-          borderRadius: '8px',
-          padding: '1rem',
-        }}
-      >
+      <Card className="rounded-lg border border-gray-300 bg-gray-100 p-4">
         <div>Default Child Component</div>
       </Card>,
     );
@@ -75,15 +51,7 @@ describe('Card Component', () => {
 
   test('matches snapshot with custom styles', () => {
     const { asFragment } = render(
-      <Card
-        style={{
-          borderColor: '#FF5733',
-          backgroundColor: '#C70039',
-          borderRadius: '16px',
-          padding: '2rem',
-          color: '#FFFFFF',
-        }}
-      >
+      <Card className="rounded-xl border border-red-500 bg-red-700 p-8 text-white">
         <div>Custom Styled Child Component</div>
       </Card>,
     );
