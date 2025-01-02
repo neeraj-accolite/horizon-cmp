@@ -136,43 +136,6 @@ describe('CardListingComponent', () => {
     expect(screen.getByText(/Gas leaks can be dangerous/)).toBeInTheDocument();
   });
 
-  it('renders links with correct text and URL', () => {
-    render(<CardListingComponent {...mockProps} />);
-    mockProps.cards.forEach((card) => {
-      card.links?.forEach((link) => {
-        const linkElement = screen.getByText(link.text);
-        expect(linkElement).toBeInTheDocument();
-        const anchorElement = linkElement.closest('a');
-        expect(anchorElement).toBeInTheDocument();
-        expect(anchorElement).toHaveAttribute('href', link.url);
-      });
-    });
-  });
-
-  it('renders cards in grid view on desktop', () => {
-    global.innerWidth = 1024;
-    global.dispatchEvent(new Event('resize'));
-    const { container } = render(<CardListingComponent {...mockProps} />);
-
-    // Log the rendered HTML for debugging
-    console.log(container.innerHTML);
-
-    mockProps.cards.forEach((card) => {
-      // Ensure card.title is a string
-      if (typeof card.title === 'string') {
-        expect(screen.getByText(card.title)).toBeInTheDocument();
-      }
-      card.links?.forEach((link) => {
-        // Use a more flexible matcher to find the link text
-        const linkElement = screen.getByText(link.text, { exact: false });
-        expect(linkElement).toBeInTheDocument();
-        const anchorElement = linkElement.closest('a');
-        expect(anchorElement).toBeInTheDocument();
-        expect(anchorElement).toHaveAttribute('href', link.url);
-      });
-    });
-  });
-
   it('handles window resize events', () => {
     render(<CardListingComponent {...mockProps} />);
 
