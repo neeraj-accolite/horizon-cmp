@@ -33,9 +33,5 @@ Default.args = {
 export const CustomStyles = Template.bind({});
 CustomStyles.args = {
   title: 'Custom Horizon Card',
-  listItems: [
-    'Custom style applied',
-    'Different padding',
-    'Unique color scheme',
-  ],
+  listItems: ['Custom style applied', 'Different padding'],
 };

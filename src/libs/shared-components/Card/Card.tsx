@@ -1,16 +1,11 @@
 import React from 'react';
 import { CardProps } from './Card.model';
 
-const Card: React.FC<CardProps> = ({
-  children,
-  style = {},
-  className = '',
-}) => {
-  return (
-    <div style={{ ...style }} className={className}>
-      {children}
-    </div>
-  );
-};
+interface CardProps {
+  children: React.ReactNode;
+  className?: string;
+}
 
-export default Card;
+export const Card: React.FC<CardProps> = ({ children, className = '' }) => {
+  return <div className={className}>{children}</div>;
+};
