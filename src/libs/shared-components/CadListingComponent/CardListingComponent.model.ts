@@ -11,4 +11,7 @@ export interface CardListingComponentProps {
   title: string;
   cards: CardProps[];
   backgroundColor?: string;
+  linkColor?: string;
+  linkUnderline?: string;
+  linkDecorationColor?: string;
 }

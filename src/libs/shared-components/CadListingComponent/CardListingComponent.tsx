@@ -9,12 +9,15 @@ const CardListingComponent: React.FC<CardListingComponentProps> = ({
   title,
   cards,
   backgroundColor,
+  linkColor,
+  linkUnderline,
+  linkDecorationColor,
 }) => {
   const [isMobileView, setIsMobileView] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 390); // iPhone 12 width is 390px
+      setIsMobileView(window.innerWidth <= 390);
     };
 
     handleResize();
@@ -30,12 +33,7 @@ const CardListingComponent: React.FC<CardListingComponentProps> = ({
         {card.links?.map((link, index) => (
           <Link key={index} underline="always" href={link.url}>
             <div
-              style={{
-                color: '#3F3E46',
-                textDecoration: 'underline',
-                textDecorationColor: '#3F3E46',
-              }}
-              className="text-base font-bold leading-6"
+              className={`text-base font-bold leading-6 ${linkColor || 'text-gray-700'} ${linkUnderline || 'underline'} ${linkDecorationColor || 'decoration-gray-700'}`}
             >
               {link.text}
             </div>
@@ -47,7 +45,7 @@ const CardListingComponent: React.FC<CardListingComponentProps> = ({
 
   return (
     <div className="flex flex-col">
-      <h2 className="pb-16 pt-8 text-center text-2xl font-bold">{title}</h2>
+      <h2 className="pb-16 pt-8 text-center">{title}</h2>
       {isMobileView ? (
         <Accordion vector={true} items={accordionItems}>
           {accordionItems.map((item, index) => (
@@ -63,7 +61,7 @@ const CardListingComponent: React.FC<CardListingComponentProps> = ({
             >
               <Card className={card.className}>
                 <h3
-                  className="flex justify-start rounded-t-lg px-6 pb-2 pr-4 pt-6 text-xl font-bold"
+                  className="flex justify-start rounded-t-lg px-6 pb-2 pr-4 pt-6"
                   style={{ backgroundColor: backgroundColor || '#F5F6F6' }}
                 >
                   <Image
@@ -75,7 +73,9 @@ const CardListingComponent: React.FC<CardListingComponentProps> = ({
                   />
                   {card.title}
                 </h3>
-                <div className="px-6 pb-12 pt-4">{card.children}</div>
+                <div className="px-6 pb-12 pt-4 text-base font-normal">
+                  {card.children}
+                </div>
               </Card>
             </div>
           ))}

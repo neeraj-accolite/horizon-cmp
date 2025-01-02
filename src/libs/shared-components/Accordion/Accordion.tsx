@@ -22,7 +22,7 @@ const Accordion: React.FC<AccordionProps> = ({
         showDivider={showSeparators}
         dividerProps={{
           className: '!border !border-solid h-px',
-          style: { borderColor: dividerColor || '#8E8C99' },
+          style: { borderColor: dividerColor || '#111111' },
         }}
       >
         {items.map((item, index) => (
@@ -30,7 +30,7 @@ const Accordion: React.FC<AccordionProps> = ({
             key={index}
             aria-label={item.title}
             title={
-              <div className="flex items-center pb-2 pt-4">
+              <div className="flex items-center pb-2 pt-4 text-lg">
                 {vector && (
                   <Image
                     src="/plumbing_vector.svg"
@@ -40,9 +40,7 @@ const Accordion: React.FC<AccordionProps> = ({
                     className="mr-2"
                   />
                 )}
-                <span className="text-base font-bold leading-6">
-                  {item.title}
-                </span>
+                <h5>{item.title}</h5>
               </div>
             }
             indicator={(props: AccordionItemIndicatorProps) => {
