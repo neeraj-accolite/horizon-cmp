@@ -38,6 +38,7 @@
     "@storybook/addon-essentials": "^8.4.7",
     "@storybook/addon-links": "^8.4.7",
     "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/addon-viewport": "^8.4.7",
     "@storybook/nextjs": "^8.4.7",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
