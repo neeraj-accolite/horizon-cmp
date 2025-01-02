@@ -22,7 +22,7 @@ const Template: StoryFn<WhyChooseHorizonCardProps> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-  title: 'Why Choose Horizon?',
+  title: `We're Fast`,
   listItems: [
     'Same-day service & next-day installation',
     '24-hour availability',

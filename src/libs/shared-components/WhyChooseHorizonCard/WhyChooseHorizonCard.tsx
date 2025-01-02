@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card } from '@shared-components';
-import styles from './WhyChooseHorizonCard.module.scss';
 
 export interface WhyChooseHorizonCardProps {
   title: string;
@@ -15,19 +14,13 @@ const WhyChooseHorizonCard: React.FC<WhyChooseHorizonCardProps> = ({
 }) => {
   return (
     <Card
-      style={{
-        borderRadius: '12px',
-        padding: '16px 12px',
-        width: '316px',
-        height: '188px',
-        backgroundColor: 'white',
-        ...style,
-      }}
+      style={style}
+      className="h-[11.75rem] w-[19.75rem] rounded-lg bg-white p-4"
     >
-      <div className={`${styles.title}`}>
-        <h2>{title}</h2>
+      <div className="mb-2 text-start">
+        <h4>{title}</h4>
       </div>
-      <ul className={`${styles.list}`}>
+      <ul className="flex list-disc flex-col gap-2 pl-6 text-left font-normal">
         {listItems.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
