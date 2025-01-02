@@ -25,7 +25,7 @@ export default {
   plugins: [nextui()],
   theme: {
     fontSize: {
-      base: ['1rem', { lineHeight: '1.75rem' }],
+      base: ['1rem', { lineHeight: '1.5rem' }],
       lg: ['1.125rem', { lineHeight: '1.75rem' }],
       xl: ['1.25rem', { lineHeight: '1.75rem' }],
       '2xl': ['1.5rem', { lineHeight: '1.75rem' }],
