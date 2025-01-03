@@ -1,7 +1,6 @@
 // CarouselComp.stories.tsx
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
-import styles from './Carousel.module.scss';
 import Carousel from './Carousel';
 
 export default {
@@ -11,12 +10,20 @@ export default {
 } as Meta;
 
 const Template: StoryFn = (args) => (
-  <div className={styles.storybookContainer}>
+  <div className="bg-gray-100 p-5">
     <Carousel {...args}>
-      <div className={styles.carouselItem}>Item 1</div>
-      <div className={styles.carouselItem}>Item 2</div>
-      <div className={styles.carouselItem}>Item 3</div>
-      <div className={styles.carouselItem}>Item 4</div>
+      <div className="rounded-lg border border-gray-300 bg-white p-5 text-center">
+        Item 1
+      </div>
+      <div className="rounded-lg border border-gray-300 bg-white p-5 text-center">
+        Item 2
+      </div>
+      <div className="rounded-lg border border-gray-300 bg-white p-5 text-center">
+        Item 3
+      </div>
+      <div className="rounded-lg border border-gray-300 bg-white p-5 text-center">
+        Item 4
+      </div>
     </Carousel>
   </div>
 );
