@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WhyChooseHorizonCard matches the snapshot 1`] = `
+<div>
+  <div
+    style="border-radius: 12px; padding: 16px 12px; width: 316px; height: 188px; background-color: white;"
+  >
+    <div
+      class="title"
+    >
+      <h2>
+        Why Choose Horizon?
+      </h2>
+    </div>
+    <ul
+      class="list"
+    >
+      <li>
+        Same-day service & next-day installation
+      </li>
+      <li>
+        24-hour availability
+      </li>
+      <li>
+        On-time guarantee
+      </li>
+    </ul>
+  </div>
+</div>
+`;

@@ -5,17 +5,15 @@ const ArrowLeft: React.FC<IconProps> = ({
   fill = 'currentColor',
   filled,
   size,
-  height,
-  width,
   ...props
 }) => {
   return (
     <svg
       data-testid="arrow-left-icon"
       fill="currentColor"
-      height={height || size || 24}
+      height={size || 24}
       viewBox="0 0 24 24"
-      width={width || size || 24}
+      width={size || 24}
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
