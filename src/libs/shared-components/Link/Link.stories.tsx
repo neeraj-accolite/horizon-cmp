@@ -64,7 +64,7 @@ export const LinkWithTooltip: Story = {
     children: (
       <div className="group relative">
         <span className="text-blue-500">Hover over me</span>
-        <div className="absolute left-0 mt-2 hidden rounded bg-black p-2 text-xs text-white group-hover:block">
+        <div className="absolute left-0 mt-2 hidden rounded bg-black p-2 text-white group-hover:block">
           This is a tooltip!
         </div>
       </div>

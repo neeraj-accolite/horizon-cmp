@@ -7,7 +7,7 @@ import { LinkText } from './LinkText';
 import * as Icons from './Icons';
 import ArrowLeft from './Icons/IconList/ArrowLeft';
 import { WhyChooseHorizonCard } from './WhyChooseHorizonCard';
-
+import { Carousel } from './Carousel';
 export {
   Accordion,
   Button,
@@ -18,4 +18,5 @@ export {
   Link,
   LinkText,
   WhyChooseHorizonCard,
+  Carousel,
 };
