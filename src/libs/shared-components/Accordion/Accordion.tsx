@@ -31,7 +31,7 @@ const Accordion: React.FC<AccordionProps> = ({
             title={
               <div className="flex items-center pb-2 pt-4 text-lg">
                 {vector && <PlumbingVector fill="currentColor" size={32} />}
-                <h5>{item.title}</h5>
+                <h5 className="ml-1">{item.title}</h5>
               </div>
             }
             indicator={(props: AccordionItemIndicatorProps) => {
