@@ -38,6 +38,12 @@ export const theme: MultiTenantThemeProps = {
         'current-page-color': '#222222',
         'current-page-color2': '#222222',
       },
+      hero: {
+        background: '#F5F6F6',
+        heading: '#3F3E46',
+        overview: '#3F3E46',
+        callout: '#3F3E46',
+      },
     },
   },
 };
