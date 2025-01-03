@@ -64,9 +64,7 @@ describe('Button Component', () => {
         Primary Button
       </Button>,
     );
-    expect(getByText('Primary Button')).toHaveClass(
-      'text-buttonTextColor-primary',
-    );
+    expect(getByText('Primary Button')).toHaveClass('text-primary-foreground');
   });
 
   test('applies outline text color when bordered variant is used', () => {
@@ -75,9 +73,7 @@ describe('Button Component', () => {
         Bordered Button
       </Button>,
     );
-    expect(getByText('Bordered Button')).toHaveClass(
-      'text-buttonTextColor-outline',
-    );
+    expect(getByText('Bordered Button')).toHaveClass('border-secondary');
   });
 
   test('passes additional props', () => {

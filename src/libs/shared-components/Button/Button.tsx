@@ -10,7 +10,6 @@ const Button: React.FC<ButtonProps> = ({
   children,
   url,
   isDisabled = false,
-  size,
   radius = 'sm',
   color,
   variant,
@@ -18,17 +17,17 @@ const Button: React.FC<ButtonProps> = ({
   ...rest
 }) => {
   const textColorMap = {
-    primary: 'text-buttonTextColor-primary',
-    secondary: 'text-buttonTextColor-secondary',
-    default: 'text-white',
-    success: 'text-buttonTextColor-success',
-    warning: 'text-buttonTextColor-warning',
-    danger: 'text-buttonTextColor-danger',
+    primary: styles.primary,
+    secondary: styles.secondary,
+    default: styles.default,
+    success: styles.success,
+    warning: styles.warning,
+    danger: styles.danger,
   };
   let textColor = textColorMap[color] || textColorMap.default;
 
   if (variant === 'bordered') {
-    textColor = 'text-buttonTextColor-outline'; // Ensure bordered variant uses outline color
+    textColor = styles.outline; // Ensure bordered variant uses outline color
   }
   return (
     <NextUIButton
@@ -38,7 +37,6 @@ const Button: React.FC<ButtonProps> = ({
       isDisabled={isDisabled}
       className={`${textColor} ${styles.button} ${className}`}
       onPress={onClick}
-      size={size}
       radius={radius}
       color={color}
       {...rest}
