@@ -1,24 +1,50 @@
+'use client';
+
 import React from 'react';
+import { Button as NextUIButton } from '@nextui-org/react';
 import { ButtonProps } from './Button.model';
 import styles from './Button.module.scss';
-import { Button as ButtonComp } from '@nextui-org/button';
 
-const Button = ({
-  label,
+const Button: React.FC<ButtonProps> = ({
+  className = '',
+  children,
+  url,
+  isDisabled = false,
+  size,
+  radius = 'sm',
+  color,
+  variant,
   onClick,
-  color = 'primary',
   ...rest
-}: ButtonProps) => {
+}) => {
+  const textColorMap = {
+    primary: 'text-buttonTextColor-primary',
+    secondary: 'text-buttonTextColor-secondary',
+    default: 'text-white',
+    success: 'text-buttonTextColor-success',
+    warning: 'text-buttonTextColor-warning',
+    danger: 'text-buttonTextColor-danger',
+  };
+  let textColor = textColorMap[color] || textColorMap.default;
+
+  if (variant === 'bordered') {
+    textColor = 'text-buttonTextColor-outline'; // Ensure bordered variant uses outline color
+  }
   return (
-    <ButtonComp
-      {...rest}
-      disableAnimation={true}
-      className={`${styles.button} ${styles[color]}`}
+    <NextUIButton
+      as="a"
+      href={isDisabled ? undefined : url}
+      variant={variant}
+      isDisabled={isDisabled}
+      className={`${textColor} ${styles.button} ${className}`}
       onPress={onClick}
-      aria-label={label}
+      size={size}
+      radius={radius}
+      color={color}
+      {...rest}
     >
-      {label}
-    </ButtonComp>
+      {children}
+    </NextUIButton>
   );
 };
 
