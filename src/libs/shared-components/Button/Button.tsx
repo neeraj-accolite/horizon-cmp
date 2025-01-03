@@ -16,26 +16,13 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   ...rest
 }) => {
-  const textColorMap = {
-    primary: styles.primary,
-    secondary: styles.secondary,
-    default: styles.default,
-    success: styles.success,
-    warning: styles.warning,
-    danger: styles.danger,
-  };
-  let textColor = textColorMap[color] || textColorMap.default;
-
-  if (variant === 'bordered') {
-    textColor = styles.outline; // Ensure bordered variant uses outline color
-  }
   return (
     <NextUIButton
       as="a"
       href={isDisabled ? undefined : url}
       variant={variant}
       isDisabled={isDisabled}
-      className={`${textColor} ${styles.button} ${className}`}
+      className={`${variant === 'bordered' ? styles.outline : styles[color]} ${styles.button} ${className}`}
       onPress={onClick}
       radius={radius}
       color={color}
