@@ -28,7 +28,6 @@ describe('CarouselComp', () => {
         <div>Item 2</div>
       </Carousel>,
     );
-    screen.debug();
     // Check if the container has the correct class
     const carouselContainer = screen.getByRole('list');
     expect(carouselContainer).toHaveClass('react-multi-carousel-track');
