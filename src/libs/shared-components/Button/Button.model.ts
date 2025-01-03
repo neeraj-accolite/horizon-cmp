@@ -4,21 +4,22 @@ export interface ButtonProps extends CustomButtonProps {
   /**
    * The class applied to the parent element.
    */
-  rootClass?: string;
+  className?: string;
   /**
-   * Label for the button
+   * url of the button
    */
-  label?: string;
+  url?: string;
   /**
-   * Label Color
+   * The colors for the button
    */
-  labelColor?: string;
+  color: 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
   /**
-   * Font weight of the button
+   * isDisable button to enable and disable the button
    */
-  fontWeight?: number;
+  isDisabled?: boolean;
   /**
-   * OnClick event of the buttons
+   * A function to be called when the button is clicked.
+   * This handles the click event for the button.
    */
   onClick?: () => void;
 }

@@ -1,3 +1,4 @@
+'use client';
 import { HeroSection } from '@shared-components';
 
 export default function Home() {
@@ -11,6 +12,9 @@ export default function Home() {
             system replacement and installation."
         calloutText="Inline callout if service is only offered in specific areas"
         ctaButtonText="Book Online"
+        onHeroCtaClicked={() => {
+          alert('the CTA button is clicked');
+        }}
       />
     </div>
   );

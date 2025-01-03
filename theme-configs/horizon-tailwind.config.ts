@@ -3,7 +3,7 @@ import { MultiTenantThemeProps } from '.';
 export const theme: MultiTenantThemeProps = {
   extend: {
     colors: {
-      primary: '#f16327',
+      primary: '#6D6C76',
       secondary: '#002d55',
       accent: '#00ff00',
       error: '#ff0000',
@@ -43,6 +43,14 @@ export const theme: MultiTenantThemeProps = {
         heading: '#3F3E46',
         overview: '#3F3E46',
         callout: '#3F3E46',
+      },
+      buttonTextColor: {
+        primary: '#ffff',
+        secondary: '#fff000',
+        outline: '#111111',
+        success: '#AFE1AF',
+        warning: '#C9CC3F',
+        danger: '#ffff',
       },
     },
   },

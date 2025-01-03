@@ -18,4 +18,9 @@ export interface HeroSectionProps {
    * CTA button text
    */
   ctaButtonText: string;
+
+  /**
+   * The click event listener on the CTA button clicked of the Hero component.
+   */
+  onHeroCtaClicked: () => void;
 }

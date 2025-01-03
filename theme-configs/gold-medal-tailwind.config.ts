@@ -44,6 +44,14 @@ export const theme: MultiTenantThemeProps = {
         overview: '#3F3E46',
         callout: '#3F3E46',
       },
+      buttonTextColor: {
+        primary: '#f16327',
+        secondary: '#ffff',
+        outline: '#111111',
+        success: '#AFE1AF',
+        warning: '#C9CC3F',
+        danger: '#ffff',
+      },
     },
   },
 };
