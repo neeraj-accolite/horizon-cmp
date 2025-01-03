@@ -1,8 +1,6 @@
 import React from 'react';
-import Image from 'next/image';
-
-const downArrow = '/downArrow.svg';
-const upArrow = '/upArrow.svg';
+import ArrowLeft from '../Icons/IconList/ArrowLeft';
+import DownArrow from '../Icons/IconList/DownArrow';
 
 interface AccordionItemIndicatorProps {
   isOpen: boolean;
@@ -13,16 +11,15 @@ const AccordionItemIndicator: React.FC<AccordionItemIndicatorProps> = ({
 }) => {
   return (
     <div
-      className={`ease transition-transform duration-300 ${
+      className={`ease pb-2 pt-4 transition-transform duration-300 ${
         isOpen ? 'rotate-90' : 'rotate-0'
       }`}
     >
-      <Image
-        src={isOpen ? upArrow : downArrow}
-        alt="Arrow Icon"
-        width={16}
-        height={16}
-      />
+      {isOpen ? (
+        <DownArrow size={16} data-testid="down-arrow-icon" />
+      ) : (
+        <ArrowLeft size={16} data-testid="arrow-left-icon" />
+      )}
     </div>
   );
 };

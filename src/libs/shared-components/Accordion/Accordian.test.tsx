@@ -43,10 +43,10 @@ jest.mock('next/image', () => ({
   ) => <img {...props} />,
 }));
 
-describe('MultiNodeAccordion', () => {
+describe('Accordion', () => {
   test('matches snapshot', () => {
     const { asFragment } = render(
-      <Accordion items={items}>
+      <Accordion vector={true} items={items}>
         <ul>
           <li>Child Item 1</li>
           <li>Child Item 2</li>
@@ -58,7 +58,7 @@ describe('MultiNodeAccordion', () => {
 
   test('renders all accordion items', () => {
     render(
-      <Accordion items={items}>
+      <Accordion vector={true} items={items}>
         <ul>
           <li>Child Item 1</li>
           <li>Child Item 2</li>
@@ -69,17 +69,16 @@ describe('MultiNodeAccordion', () => {
       expect(screen.getByText(item.title)).toBeInTheDocument();
     });
   });
-  it('should render down arrow when isOpen is false', () => {
-    render(<AccordionItemIndicator isOpen={false} />);
+});
 
-    const image = screen.getByAltText('Arrow Icon');
-    expect(image).toHaveAttribute('src', '/downArrow.svg');
+describe('AccordionItemIndicator', () => {
+  it('should render ArrowLeft when isOpen is false', () => {
+    render(<AccordionItemIndicator isOpen={false} />);
+    expect(screen.getByTestId('arrow-left-icon')).toBeInTheDocument();
   });
 
-  it('should render up arrow when isOpen is true', () => {
+  it('should render DownArrow when isOpen is true', () => {
     render(<AccordionItemIndicator isOpen={true} />);
-
-    const image = screen.getByAltText('Arrow Icon');
-    expect(image).toHaveAttribute('src', '/upArrow.svg');
+    expect(screen.getByTestId('down-arrow-icon')).toBeInTheDocument();
   });
 });

@@ -63,8 +63,7 @@ MultiNodeAccordion.args = {
   ],
   height: 'auto',
   width: '100%',
-  multiExpand: true,
-  onToggle: (index) => console.log(`Accordion item ${index} toggled`),
-  showSeparators: false,
+  showSeparators: true,
   dividerColor: '#8E8C99',
+  vector: true,
 };

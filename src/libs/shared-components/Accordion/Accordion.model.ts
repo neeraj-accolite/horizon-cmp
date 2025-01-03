@@ -1,9 +1,9 @@
 import { AccordionProps as NextUIAccordionProps } from '@nextui-org/react';
-import { JSXElementConstructor, ReactElement } from 'react';
 
 export interface AccordionItem {
   title: string;
-  children?: ReactElement<unknown, string | JSXElementConstructor<unknown>>;
+  children?: React.ReactNode;
+  isOpen?: boolean;
 }
 
 export interface AccordionProps extends NextUIAccordionProps {
@@ -15,4 +15,6 @@ export interface AccordionProps extends NextUIAccordionProps {
   style?: React.CSSProperties; // Inline styles for the accordion
   showSeparators?: boolean; // To show or hide separators between item
   dividerColor?: string;
+  hideSeparatorOnOpen?: boolean;
+  vector: boolean;
 }

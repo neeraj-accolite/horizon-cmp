@@ -5,5 +5,7 @@ export { default as LocalOffer } from './IconList/LocalOffer';
 export { default as DownArrow } from './IconList/DownArrow';
 export { default as ChevronRight } from './IconList/ChevronRight';
 export { default as CardMembership } from './IconList/CardMembership';
+export { default as PlumbingVector } from './IconList/PlumbingVector';
+export { default as ArrowLeft } from './IconList/ArrowLeft';
 
 export type { IconProps } from './Icons.model';
