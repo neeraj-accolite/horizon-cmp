@@ -6,12 +6,12 @@ import {
 } from '@nextui-org/accordion';
 import { AccordionProps } from './Accordion.model';
 import AccordionItemIndicator from './AccordionItemIndicator';
-import Image from 'next/image';
+import { PlumbingVector } from '../Icons';
+import styles from './Accordion.module.scss';
 
 const Accordion: React.FC<AccordionProps> = ({
   items,
   className,
-  dividerColor,
   vector,
   showSeparators = true,
 }) => {
@@ -21,8 +21,7 @@ const Accordion: React.FC<AccordionProps> = ({
         aria-label="Accordion"
         showDivider={showSeparators}
         dividerProps={{
-          className: '!border !border-solid h-px',
-          style: { borderColor: dividerColor || '#111111' },
+          className: `${styles.divider}`,
         }}
       >
         {items.map((item, index) => (
@@ -31,15 +30,7 @@ const Accordion: React.FC<AccordionProps> = ({
             aria-label={item.title}
             title={
               <div className="flex items-center pb-2 pt-4 text-lg">
-                {vector && (
-                  <Image
-                    src="/plumbing_vector.svg"
-                    alt="Icon"
-                    width={24}
-                    height={24}
-                    className="mr-2"
-                  />
-                )}
+                {vector && <PlumbingVector fill="currentColor" size={32} />}
                 <h5>{item.title}</h5>
               </div>
             }
