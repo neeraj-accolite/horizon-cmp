@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI Component- Hero Section The snapshot is matches of the UI component 1`] = `
+<div>
+  <div
+    class="mx-auto grid grid-cols-1 justify-between bg-hero-background px-4 py-10 sm:grid-cols-2 sm:px-24 sm:py-14"
+  >
+    <div
+      class="content-center justify-center sm:mr-28"
+    >
+      <h1
+        class="text-center text-hero-heading sm:text-left"
+      >
+        Plumbing
+      </h1>
+      <div
+        class="whitespace-pre-wrap py-4 text-hero-overview sm:py-6"
+      >
+        Whether your problem feels like a drop in the bucket or a giant puddle of woes, Horizon is here to help. &lt;br /&gt;Our highly trained plumbers handle it all, from minor leak repairs to full system replacement and installation.
+      </div>
+      <div
+        class="mb-2 pb-4"
+      >
+        <span
+          class="font-bold text-hero-callout"
+        >
+          Inline callout if service is only offered in specific areas
+        </span>
+      </div>
+      <div
+        class="mt-2"
+      >
+        <a
+          class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-small [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-primary text-primary-foreground data-[hover=true]:opacity-hover button primary sm:!max-w-xs"
+          role="button"
+          tabindex="0"
+        >
+          Book Online
+        </a>
+      </div>
+    </div>
+    <div
+      class="mt-2 flex content-center justify-center sm:mt-0"
+    >
+      <div
+        class="content-center"
+      >
+        <img
+          alt="review component"
+          data-nimg="1"
+          decoding="async"
+          height="72"
+          loading="lazy"
+          src="/_next/image?url=%2FReview.png&w=640&q=75"
+          srcset="/_next/image?url=%2FReview.png&w=384&q=75 1x, /_next/image?url=%2FReview.png&w=640&q=75 2x"
+          style="color: transparent;"
+          width="280"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

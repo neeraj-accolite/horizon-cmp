@@ -7,7 +7,7 @@ export default function Home() {
       <HeroSection
         title="Plumbing"
         overview="Whether your problem feels like a drop in the bucket or a giant
-            puddle of woes, Horizon is here to help. \n Our highly
+            puddle of woes, Horizon is here to help. <br />Our highly
             trained plumbers handle it all, from minor leak repairs to full
             system replacement and installation."
         calloutText="Inline callout if service is only offered in specific areas"
