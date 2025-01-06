@@ -9,6 +9,7 @@ import ArrowLeft from './IconList/ArrowLeft';
 import Star from './IconList/Star';
 import CardMembership from './IconList/CardMembership';
 import UpArrow from './IconList/UpArrow';
+import PlumbingVector from './IconList/PlumbingVector';
 
 describe('Icons', () => {
   it('renders ChevronRight icon with filled prop true', () => {
@@ -139,5 +140,34 @@ describe('Icons', () => {
       <UpArrow fill="currentColor" filled={false} size={24} />,
     );
     expect(container).toMatchSnapshot();
+  });
+  it('renders PlumbingVector icon with filled prop true', () => {
+    const { container } = render(
+      <PlumbingVector fill="currentColor" filled={true} size={32} />,
+    );
+    expect(container).toMatchSnapshot();
+  });
+
+  it('renders PlumbingVector icon with filled prop false', () => {
+    const { container } = render(
+      <PlumbingVector fill="currentColor" filled={false} size={32} />,
+    );
+    expect(container).toMatchSnapshot();
+  });
+
+  it('renders PlumbingVector icon with default size when size prop is not provided', () => {
+    const { getByTestId } = render(<PlumbingVector fill="currentColor" />);
+    const icon = getByTestId('plumbing-vector-icon');
+    expect(icon).toHaveAttribute('height', '32');
+    expect(icon).toHaveAttribute('width', '32');
+  });
+
+  it('renders PlumbingVector icon with provided size', () => {
+    const { getByTestId } = render(
+      <PlumbingVector fill="currentColor" size={40} />,
+    );
+    const icon = getByTestId('plumbing-vector-icon');
+    expect(icon).toHaveAttribute('height', '40');
+    expect(icon).toHaveAttribute('width', '40');
   });
 });

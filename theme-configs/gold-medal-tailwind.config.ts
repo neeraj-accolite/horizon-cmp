@@ -38,6 +38,15 @@ export const theme: MultiTenantThemeProps = {
         'current-page-color': '#222222',
         'current-page-color2': '#222222',
       },
+      card: {
+        'background-color': '#F5F6F6',
+        'link-color': '#374151',
+        'link-underline': 'underline',
+        'link-decoration-color': '#374151',
+      },
+      accordion: {
+        'divider-color': '#111111',
+      },
       buttonTextColor: {
         primary: '#f16327',
         secondary: '#ffff',

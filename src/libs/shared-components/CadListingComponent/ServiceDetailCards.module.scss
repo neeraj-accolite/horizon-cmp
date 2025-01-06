@@ -1,0 +1,8 @@
+
+.cardTitle {
+    @apply flex justify-start rounded-t-lg px-6 pb-2 pr-4 pt-6 bg-card-background-color;
+  }
+  
+  .link {
+    @apply text-base font-bold leading-6 text-card-link-color underline decoration-card-link-decoration-color !important;
+  }

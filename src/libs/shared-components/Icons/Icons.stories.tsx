@@ -5,6 +5,7 @@ import LocalOffer from './IconList/LocalOffer';
 import UserAvatar from './IconList/UserAvatar';
 import DownArrow from './IconList/DownArrow';
 import ArrowLeft from './IconList/ArrowLeft';
+import PlumbingVector from './IconList/PlumbingVector';
 import Star from './IconList/Star';
 import { IconProps } from './Icons.model';
 import CardMembership from './IconList/CardMembership';
@@ -28,6 +29,7 @@ const icons = [
   { component: UpArrow, name: 'UpArrow' },
   { component: LocalOffer, name: 'LocalOffer' },
   { component: CardMembership, name: 'CardMembership' },
+  { component: PlumbingVector, name: 'PlumbingVector' },
 ];
 
 interface IconDisplayProps extends IconProps {

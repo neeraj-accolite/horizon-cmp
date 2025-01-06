@@ -1,18 +1,19 @@
-import { AccordionProps as NextUIAccordionProps } from '@nextui-org/react';
-import { JSXElementConstructor, ReactElement } from 'react';
-
 export interface AccordionItem {
   title: string;
-  children?: ReactElement<unknown, string | JSXElementConstructor<unknown>>;
+  description: string;
+  isOpen?: boolean;
 }
 
-export interface AccordionProps extends NextUIAccordionProps {
-  items: AccordionItem[];
+export interface AccordionProps<T> {
+  items: T[];
   height?: string;
   width?: string;
-  multiExpand?: boolean; // To allow multiple items to be expanded at the same t  onToggle?: (index: number) => void; // Callback function when an item is toggled
-  className?: string; // Custom class name for styling
-  style?: React.CSSProperties; // Inline styles for the accordion
-  showSeparators?: boolean; // To show or hide separators between item
+  multiExpand?: boolean;
+  onToggle?: (index: number) => void;
+  className?: string;
+  showSeparators?: boolean;
   dividerColor?: string;
+  hideSeparatorOnOpen?: boolean;
+  renderHeader?: (item: T) => React.ReactNode;
+  renderChild?: (item: T) => React.ReactNode;
 }

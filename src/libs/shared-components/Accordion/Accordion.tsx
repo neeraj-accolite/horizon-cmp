@@ -1,46 +1,50 @@
 import React from 'react';
 import {
   Accordion as AccordionComp,
-  AccordionItem,
+  AccordionItem as AccordionCompItem,
   AccordionItemIndicatorProps,
 } from '@nextui-org/accordion';
-import { AccordionProps } from './Accordion.model';
+import { AccordionProps, AccordionItem } from './Accordion.model';
 import AccordionItemIndicator from './AccordionItemIndicator';
+import styles from './Accordion.module.scss';
 
-const Accordion: React.FC<AccordionProps> = ({
+const Accordion: React.FC<AccordionProps<AccordionItem>> = ({
   items,
   className,
-  dividerColor = '#8E8C99',
-  showSeparators = false,
+  showSeparators = true,
+  renderHeader,
+  renderChild,
 }) => {
   return (
-    <div className={`${className} rounded-lg p-4 shadow-md`}>
+    <div className={`${className} rounded-lg shadow-md`}>
       <AccordionComp
         aria-label="Accordion"
         showDivider={showSeparators}
-        dividerProps={{ className: `bg-[${dividerColor}] h-0.5` }}
+        dividerProps={{
+          className: `${styles.divider}`,
+        }}
       >
         {items.map((item, index) => (
-          <AccordionItem
+          <AccordionCompItem
             key={index}
             aria-label={item.title}
             title={
-              <span className="text-base font-bold leading-6">
-                {item.title}
-              </span>
+              <div className="flex items-center pb-2 pt-4 text-lg">
+                {renderHeader ? (
+                  renderHeader(item)
+                ) : (
+                  <h5 className="ml-1">{item.title}</h5>
+                )}
+              </div>
             }
             indicator={(props: AccordionItemIndicatorProps) => {
               return <AccordionItemIndicator isOpen={props.isOpen || false} />;
             }}
           >
             <div className="mb-3 text-base font-normal leading-6">
-              {item.children && (
-                <div className="mt-0 p-0">
-                  <ul className="mt-0 pl-0">{item.children}</ul>
-                </div>
-              )}
+              {renderChild && renderChild(item)}
             </div>
-          </AccordionItem>
+          </AccordionCompItem>
         ))}
       </AccordionComp>
     </div>
