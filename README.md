@@ -12,6 +12,9 @@ cd horizon-cmp
 install dependencies : npm i 
 run storybook : npm run storybook
 
+
+To pull the latest changes: git pull origin
+
 ## Getting Started
 
 First, run the development server:
