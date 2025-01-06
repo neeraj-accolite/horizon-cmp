@@ -5,6 +5,8 @@ export interface CardProps {
   children: React.ReactNode;
   className?: string;
   links?: { text: string; url: string }[];
+  renderHeader?: (item: unknown) => React.ReactNode;
+  renderChild?: (item: unknown) => React.ReactNode;
 }
 
 export interface CardListingComponentProps {

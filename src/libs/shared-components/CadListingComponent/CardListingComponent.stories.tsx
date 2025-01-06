@@ -38,7 +38,7 @@ Default.args = {
       ),
       className: 'border border-gray-300 rounded-lg',
       links: [
-        { text: 'View Kitchen & Bathroom Services', url: '/water-heaters' },
+        { text: 'View Kitchen & Bathroom Services', url: '/kitchen-bathroom' },
       ],
     },
     {
@@ -50,7 +50,7 @@ Default.args = {
         </div>
       ),
       className: 'border border-gray-300 rounded-lg',
-      links: [{ text: 'View Water Lines Services', url: '/water-heaters' }],
+      links: [{ text: 'View Water Lines Services', url: '/water-lines' }],
     },
     {
       title: 'Drains & Sewer Lines',
@@ -62,7 +62,7 @@ Default.args = {
       ),
       className: 'border border-gray-300 rounded-lg',
       links: [
-        { text: 'View Drains & Sewer Lines Services', url: '/water-heaters' },
+        { text: 'View Drains & Sewer Lines Services', url: '/drains-sewer' },
       ],
     },
     {
@@ -74,7 +74,7 @@ Default.args = {
         </div>
       ),
       className: 'border border-gray-300 rounded-lg',
-      links: [{ text: 'View Gas Lines Services', url: '/water-heaters' }],
+      links: [{ text: 'View Gas Lines Services', url: '/gas-lines' }],
     },
     {
       title: 'Sump Pumps',
@@ -85,7 +85,7 @@ Default.args = {
         </div>
       ),
       className: 'border border-gray-300 rounded-lg',
-      links: [{ text: 'View Sump Pumps Services', url: '/water-heaters' }],
+      links: [{ text: 'View Sump Pumps Services', url: '/sump-pumps' }],
     },
     {
       title: 'Well Pumps',
@@ -97,7 +97,7 @@ Default.args = {
         </div>
       ),
       className: 'border border-gray-300 rounded-lg',
-      links: [{ text: 'View Well Pumps Services', url: '/water-heaters' }],
+      links: [{ text: 'View Well Pumps Services', url: '/well-pumps' }],
     },
     {
       title: 'Water Treatment',
@@ -109,7 +109,9 @@ Default.args = {
         </div>
       ),
       className: 'border border-gray-300 rounded-lg',
-      links: [{ text: 'View Water Treatment Services', url: '/water-heaters' }],
+      links: [
+        { text: 'View Water Treatment Services', url: '/water-treatment' },
+      ],
     },
   ],
 };

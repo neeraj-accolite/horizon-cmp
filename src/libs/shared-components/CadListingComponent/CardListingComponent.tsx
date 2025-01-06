@@ -4,6 +4,7 @@ import { Link } from '../Link';
 import { Accordion } from '../Accordion';
 import CardContent from './CardContent';
 import styles from './CardListingComponent.module.scss';
+import PlumbingVector from '../Icons/IconList/PlumbingVector';
 
 const CardListingComponent: React.FC<CardListingComponentProps> = ({
   title,
@@ -23,12 +24,11 @@ const CardListingComponent: React.FC<CardListingComponentProps> = ({
 
   return (
     <div className="flex flex-col">
-      <h2 className="pb-16 pt-8 text-center">{title}</h2>
+      <h2 className="py-8 text-center">{title}</h2>
       {isMobileView ? (
         <Accordion
-          vector={true}
           items={cards.map((card) => ({
-            title: card.title as string,
+            title: card.title,
             children: (
               <div>
                 {card.children}
@@ -40,8 +40,18 @@ const CardListingComponent: React.FC<CardListingComponentProps> = ({
               </div>
             ),
           }))}
-          // eslint-disable-next-line react/no-children-prop
-          children={null}
+          showSeparators={true}
+          renderHeader={(item) => (
+            <div className="flex items-center pb-2 pt-4 text-lg">
+              <div
+                className="mr-2"
+                style={{ display: 'flex', alignItems: 'center' }}
+              >
+                <PlumbingVector fill="currentColor" size={32} />
+              </div>
+              <span>{item.title}</span>
+            </div>
+          )}
         />
       ) : (
         <div className="flex flex-wrap justify-start">

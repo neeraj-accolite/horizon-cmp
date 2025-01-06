@@ -45,26 +45,12 @@ jest.mock('next/image', () => ({
 
 describe('Accordion', () => {
   test('matches snapshot', () => {
-    const { asFragment } = render(
-      <Accordion vector={true} items={items}>
-        <ul>
-          <li>Child Item 1</li>
-          <li>Child Item 2</li>
-        </ul>
-      </Accordion>,
-    );
+    const { asFragment } = render(<Accordion items={items}></Accordion>);
     expect(asFragment()).toMatchSnapshot();
   });
 
   test('renders all accordion items', () => {
-    render(
-      <Accordion vector={true} items={items}>
-        <ul>
-          <li>Child Item 1</li>
-          <li>Child Item 2</li>
-        </ul>
-      </Accordion>,
-    );
+    render(<Accordion items={items}></Accordion>);
     items.forEach((item) => {
       expect(screen.getByText(item.title)).toBeInTheDocument();
     });

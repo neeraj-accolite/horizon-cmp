@@ -65,5 +65,4 @@ MultiNodeAccordion.args = {
   width: '100%',
   showSeparators: true,
   dividerColor: '#8E8C99',
-  vector: true,
 };
