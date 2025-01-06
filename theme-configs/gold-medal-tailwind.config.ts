@@ -44,6 +44,15 @@ export const theme: MultiTenantThemeProps = {
         overview: '#3F3E46',
         callout: '#3F3E46',
       },
+      card: {
+        'background-color': '#F5F6F6',
+        'link-color': '#374151',
+        'link-underline': 'underline',
+        'link-decoration-color': '#374151',
+      },
+      accordion: {
+        'divider-color': '#111111',
+      },
       buttonTextColor: {
         primary: '#f16327',
         secondary: '#ffff',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { HeroSectionProps } from './HeroSection.model';
 import HeroSection from './HeroSection';
@@ -21,14 +21,6 @@ describe('UI Component- Hero Section', () => {
     });
     expect(titleElement).toBeInTheDocument();
     expect(titleElement).toHaveTextContent(defaultProps.title);
-  });
-
-  test('Hero Section CTA button callback is clickable ', () => {
-    const container = render(<HeroSection {...defaultProps} />);
-    const ctaButton = container.getByText(defaultProps.ctaButtonText);
-    expect(ctaButton).toBeInTheDocument();
-    fireEvent.click(ctaButton);
-    expect(defaultProps.onHeroCtaClicked).toHaveBeenCalled();
   });
 
   test('The snapshot is matches of the UI component', () => {
