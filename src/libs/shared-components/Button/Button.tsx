@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button as NextUIButton } from '@nextui-org/react';
+import { Button as NextUIButton } from '@nextui-org/button';
 import { ButtonProps } from './Button.model';
 import styles from './Button.module.scss';
 

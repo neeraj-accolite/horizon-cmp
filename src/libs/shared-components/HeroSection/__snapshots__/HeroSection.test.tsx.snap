@@ -16,7 +16,13 @@ exports[`UI Component- Hero Section The snapshot is matches of the UI component 
       <div
         class="whitespace-pre-wrap py-4 text-hero-overview sm:py-6"
       >
-        Whether your problem feels like a drop in the bucket or a giant puddle of woes, Horizon is here to help. &lt;br /&gt;Our highly trained plumbers handle it all, from minor leak repairs to full system replacement and installation.
+        <div>
+          Whether your problem feels like a drop in the bucket or a giant puddle of woes, Horizon is here to help. 
+          <br />
+           
+          <br />
+          Our highly trained plumbers handle it all, from minor leak repairs to full system replacement and installation.
+        </div>
       </div>
       <div
         class="mb-2 pb-4"
@@ -30,13 +36,9 @@ exports[`UI Component- Hero Section The snapshot is matches of the UI component 
       <div
         class="mt-2"
       >
-        <a
-          class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-small [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-primary text-primary-foreground data-[hover=true]:opacity-hover button primary sm:!max-w-xs"
-          role="button"
-          tabindex="0"
-        >
+        <button>
           Book Online
-        </a>
+        </button>
       </div>
     </div>
     <div

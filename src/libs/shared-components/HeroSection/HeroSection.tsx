@@ -16,7 +16,11 @@ const HeroSection = ({
       <div className="content-center justify-center sm:mr-28">
         <h1 className="text-center text-hero-heading sm:text-left">{title}</h1>
         <div className="whitespace-pre-wrap py-4 text-hero-overview sm:py-6">
-          {overview}
+          {/**
+           * TODO: Change the inner html implementation based on the confirmation on
+           * getting text/html from Drupal backend.
+           */}
+          <div dangerouslySetInnerHTML={{ __html: overview }} />
         </div>
         <div className="mb-2 pb-4">
           <span className="font-bold text-hero-callout">{calloutText}</span>
