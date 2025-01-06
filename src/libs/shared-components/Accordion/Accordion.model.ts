@@ -1,6 +1,7 @@
 export interface AccordionItem {
   title: string;
   children?: React.ReactNode;
+  links?: { text: string; url: string }[];
   isOpen?: boolean;
   renderHeader?: () => React.ReactNode;
   renderChild?: () => React.ReactNode;
