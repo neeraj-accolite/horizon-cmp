@@ -43,10 +43,7 @@ const CardListingComponent: React.FC<CardListingComponentProps> = ({
           showSeparators={true}
           renderHeader={(item) => (
             <div className="flex items-center pb-2 pt-4 text-lg">
-              <div
-                className="mr-2"
-                style={{ display: 'flex', alignItems: 'center' }}
-              >
+              <div className="mr-2 flex items-center">
                 <PlumbingVector fill="currentColor" size={32} />
               </div>
               <span>{item.title}</span>
