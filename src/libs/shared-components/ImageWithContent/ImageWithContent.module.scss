@@ -1,0 +1,13 @@
+.container {
+    @apply bg-ImageWithContent-backgroundColor;
+  }
+  
+  .title {
+    @apply text-ImageWithContent-titleColor;
+  }
+  
+  .description {
+    @apply text-ImageWithContent-descriptionColor;
+  }
+
+  
