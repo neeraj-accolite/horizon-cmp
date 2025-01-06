@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import CardListingComponent from './CardListingComponent';
-import { CardListingComponentProps } from './CardListingComponent.model';
+import CardListingComponent from './ServiceDetailCards';
+import { ServiceDetailCardsProps } from './ServiceDetailCards.model';
 
 jest.mock('../Link', () => ({
   __esModule: true,
@@ -11,110 +11,66 @@ jest.mock('../Link', () => ({
   ),
 }));
 
-const mockProps: CardListingComponentProps = {
+const mockProps: ServiceDetailCardsProps = {
   title: 'Our Plumbing Services',
   cards: [
     {
       title: 'Water Heaters',
-      children: (
-        <div>
-          Keep your hot water flowing with our expert repair, proactive
-          maintenance, and full installation services.
-        </div>
-      ),
-      className: 'border border-gray-300 rounded-lg',
-      links: [{ text: 'View Water Heaters Services', url: '/water-heaters' }],
+      description:
+        'Keep your hot water flowing with our expert repair, proactive maintenance, and full installation services.',
+      link_text: 'View Water Heaters Services',
+      link_url: '/water-heaters',
     },
     {
       title: 'Kitchen & Bathroom',
-      children: (
-        <div>
-          Our expertise in repairing and installing kitchen and bathroom
-          fixtures ensures these workhorses will have your back for years to
-          come.
-        </div>
-      ),
-      className: 'border border-gray-300 rounded-lg',
-      links: [
-        { text: 'View Kitchen & Bathroom Services', url: '/kitchen-bathroom' },
-      ],
+      description:
+        'Our expertise in repairing and installing kitchen and bathroom fixtures ensures these workhorses will have your back for years to come.',
+      link_text: 'View Kitchen & Bathroom Services',
+      link_url: '/kitchen-bathroom',
     },
     {
       title: 'Water Lines',
-      children: (
-        <div>
-          Water belongs in your pipes, not in a puddle on your floor. Trade in
-          your mop for our water line repair and replacement services.
-        </div>
-      ),
-      className: 'border border-gray-300 rounded-lg',
-      links: [{ text: 'View Water Lines Services', url: '/water-lines' }],
+      description:
+        'Water belongs in your pipes, not in a puddle on your floor. Trade in your mop for our water line repair and replacement services.',
+      link_text: 'View Water Lines Services',
+      link_url: '/water-lines',
     },
     {
       title: 'Drains & Sewer Lines',
-      children: (
-        <div>
-          Whether you’re saddled with a clogged drain or a more serious sewer
-          line issue, our team is here to help.
-        </div>
-      ),
-      className: 'border border-gray-300 rounded-lg',
-      links: [
-        {
-          text: 'View Drains & Sewer Lines Services',
-          url: '/drains-sewer-lines',
-        },
-      ],
+      description:
+        'Whether you’re saddled with a clogged drain or a more serious sewer line issue, our team is here to help.',
+      link_text: 'View Drains & Sewer Lines Services',
+      link_url: '/drains-sewer-lines',
     },
     {
       title: 'Gas Lines',
-      children: (
-        <div>
-          Gas leaks can be dangerous. Leave it to the professionals to ensure
-          your gas lines are in safe working order.
-        </div>
-      ),
-      className: 'border border-gray-300 rounded-lg',
-      links: [{ text: 'View Gas Lines Services', url: '/gas-lines' }],
+      description:
+        'Gas leaks can be dangerous. Leave it to the professionals to ensure your gas lines are in safe working order.',
+      link_text: 'View Gas Lines Services',
+      link_url: '/gas-lines',
     },
     {
       title: 'Sump Pumps',
-      children: (
-        <div>
-          With our sump pump repair and installation services, we can make sure
-          your home stays dry, no matter the weather outside.
-        </div>
-      ),
-      className: 'border border-gray-300 rounded-lg',
-      links: [{ text: 'View Sump Pumps Services', url: '/sump-pumps' }],
+      description:
+        'With our sump pump repair and installation services, we can make sure your home stays dry, no matter the weather outside.',
+      link_text: 'View Sump Pumps Services',
+      link_url: '/sump-pumps',
     },
     {
       title: 'Well Pumps',
-      children: (
-        <div>
-          If your home relies on well water, a broken well pump spells disaster.
-          Whether it’s in need of repair or a full replacement, we’re here to
-          help.
-        </div>
-      ),
-      className: 'border border-gray-300 rounded-lg',
-      links: [{ text: 'View Well Pumps Services', url: '/well-pumps' }],
+      description:
+        'If your home relies on well water, a broken well pump spells disaster. Whether it’s in need of repair or a full replacement, we’re here to help.',
+      link_text: 'View Well Pumps Services',
+      link_url: '/well-pumps',
     },
     {
       title: 'Water Treatment',
-      children: (
-        <div>
-          Ensure your water is clean and safe with our comprehensive water
-          treatment services.
-        </div>
-      ),
-      className: 'border border-gray-300 rounded-lg',
-      links: [
-        { text: 'View Water Treatment Services', url: '/water-treatment' },
-      ],
+      description:
+        'Ensure your water is clean and safe with our comprehensive water treatment services.',
+      link_text: 'View Water Treatment Services',
+      link_url: '/water-treatment',
     },
   ],
-  backgroundColor: '#F5F6F6',
 };
 
 describe('CardListingComponent', () => {
@@ -123,7 +79,7 @@ describe('CardListingComponent', () => {
     expect(screen.getByText('Our Plumbing Services')).toBeInTheDocument();
   });
 
-  it('renders all cards with their titles and children', () => {
+  it('renders all cards with their titles and descriptions', () => {
     render(<CardListingComponent {...mockProps} />);
     mockProps.cards.forEach((card) => {
       // Ensure card.title is a string

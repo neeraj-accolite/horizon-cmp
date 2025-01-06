@@ -1,14 +1,14 @@
 import React from 'react';
 import {
   Accordion as AccordionComp,
-  AccordionItem,
+  AccordionItem as AccordionCompItem,
   AccordionItemIndicatorProps,
 } from '@nextui-org/accordion';
-import { AccordionProps } from './Accordion.model';
+import { AccordionProps, AccordionItem } from './Accordion.model';
 import AccordionItemIndicator from './AccordionItemIndicator';
 import styles from './Accordion.module.scss';
 
-const Accordion: React.FC<AccordionProps> = ({
+const Accordion: React.FC<AccordionProps<AccordionItem>> = ({
   items,
   className,
   showSeparators = true,
@@ -25,7 +25,7 @@ const Accordion: React.FC<AccordionProps> = ({
         }}
       >
         {items.map((item, index) => (
-          <AccordionItem
+          <AccordionCompItem
             key={index}
             aria-label={item.title}
             title={
@@ -42,9 +42,9 @@ const Accordion: React.FC<AccordionProps> = ({
             }}
           >
             <div className="mb-3 text-base font-normal leading-6">
-              {renderChild ? renderChild(item) : item.children}
+              {renderChild && renderChild(item)}
             </div>
-          </AccordionItem>
+          </AccordionCompItem>
         ))}
       </AccordionComp>
     </div>

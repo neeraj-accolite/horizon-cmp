@@ -1,5 +1,5 @@
-export { default as CardListingComponent } from './CardListingComponent';
+export { default as CardListingComponent } from './ServiceDetailCards';
 export type {
-  CardListingComponentProps,
+  ServiceDetailCardsProps,
   CardProps,
-} from './CardListingComponent.model';
+} from './ServiceDetailCards.model';

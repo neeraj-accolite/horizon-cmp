@@ -3,7 +3,7 @@
 exports[`Accordion matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="undefined rounded-lg px-4 py-8 shadow-md"
+    class="undefined rounded-lg shadow-md"
   >
     <div
       aria-label="Accordion"
