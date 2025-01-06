@@ -1,5 +1,20 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+Software required on the system: 
+1. Node > 18
+2. Git 
+
+c:/Horizon-nxt
+git clone https://github.com/neeraj-accolite/horizon-cmp.git 
+
+cd horizon-cmp 
+
+install dependencies : npm i 
+run storybook : npm run storybook
+
+
+To pull the latest changes: git pull origin
+
 ## Getting Started
 
 First, run the development server:

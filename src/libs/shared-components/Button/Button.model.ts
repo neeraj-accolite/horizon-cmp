@@ -8,7 +8,7 @@ export interface ButtonProps extends CustomButtonProps {
   /**
    * url of the button
    */
-  url: string;
+  url?: string;
   /**
    * The colors for the button
    */

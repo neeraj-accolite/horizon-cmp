@@ -3,17 +3,17 @@
 exports[`WhyChooseHorizonCard matches the snapshot 1`] = `
 <div>
   <div
-    style="border-radius: 12px; padding: 16px 12px; width: 316px; height: 188px; background-color: white;"
+    class="min-h-[11.75rem] max-w-[19.75rem] rounded-lg bg-white px-3 py-4"
   >
     <div
-      class="title"
+      class="mb-2 text-start"
     >
-      <h2>
+      <h4>
         Why Choose Horizon?
-      </h2>
+      </h4>
     </div>
     <ul
-      class="list"
+      class="flex list-disc flex-col gap-2 pl-6 pt-3 text-left text-base font-normal"
     >
       <li>
         Same-day service & next-day installation

@@ -6,6 +6,7 @@ import { Link } from './Link';
 import { LinkText } from './LinkText';
 import * as Icons from './Icons';
 import ArrowLeft from './Icons/IconList/ArrowLeft';
+import { HeroSection } from './HeroSection';
 import { WhyChooseHorizonCard } from './WhyChooseHorizonCard';
 
 export {
@@ -18,4 +19,5 @@ export {
   Link,
   LinkText,
   WhyChooseHorizonCard,
+  HeroSection,
 };

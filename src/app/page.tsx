@@ -1,20 +1,21 @@
-import { Button, Icons } from '@shared-components';
+'use client';
+import { HeroSection } from '@shared-components';
 
 export default function Home() {
   return (
-    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 sm:p-20">
-      <h1>This is H1 TAG</h1>
-      <h2>This is H2 TAG</h2>
-      <h3>This is H3 TAG</h3>
-      <h4>This is H4 TAG</h4>
-      <h5>This is H5 TAG</h5>
-      <h6>This is H6 TAG</h6>
-      <Button label="Test Button" color="primary" />
-      <div className="font-mono">This is sample font text</div>
-      <div className="font-serif">This is sample serif text</div>
-      <div className="font-sans">This is sample sans text</div>
-      <div>This is sample default text</div>
-      <Icons.LocalOffer />
+    <div className="min-h-screen items-center">
+      <HeroSection
+        title="Plumbing"
+        overview="Whether your problem feels like a drop in the bucket or a giant
+            puddle of woes, Horizon is here to help. <br />Our highly
+            trained plumbers handle it all, from minor leak repairs to full
+            system replacement and installation."
+        calloutText="Inline callout if service is only offered in specific areas"
+        ctaButtonText="Book Online"
+        onHeroCtaClicked={() => {
+          alert('the CTA button is clicked');
+        }}
+      />
     </div>
   );
 }
