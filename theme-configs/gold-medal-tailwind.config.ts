@@ -47,6 +47,14 @@ export const theme: MultiTenantThemeProps = {
       accordion: {
         'divider-color': '#111111',
       },
+      buttonTextColor: {
+        primary: '#f16327',
+        secondary: '#ffff',
+        outline: '#111111',
+        success: '#AFE1AF',
+        warning: '#C9CC3F',
+        danger: '#ffff',
+      },
     },
   },
 };
