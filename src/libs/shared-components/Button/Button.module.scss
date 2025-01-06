@@ -1,35 +1,35 @@
 .button {
-  @apply h-10 gap-2 px-4 font-bold leading-6;
+  @apply h-10 w-full gap-2 bg-primary px-4 text-base font-bold leading-6;
 }
 
-.primary{
+.primary {
   @apply text-buttonTextColor-primary;
 }
 
-.secondary{
+.secondary {
   @apply text-buttonTextColor-secondary;
 }
 
-.default{
+.default {
   @apply text-buttonTextColor-success;
 }
 
-.success{
+.success {
   @apply text-buttonTextColor-success;
 }
 
-.warning{
+.warning {
   @apply text-buttonTextColor-warning;
 }
 
-.danger{
+.danger {
   @apply text-buttonTextColor-danger;
 }
 
-.outline{
+.outline {
   @apply text-buttonTextColor-outline;
 }
 
-.default{
+.default {
   @apply text-white;
 }

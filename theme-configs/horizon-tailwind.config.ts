@@ -3,7 +3,7 @@ import { MultiTenantThemeProps } from '.';
 export const theme: MultiTenantThemeProps = {
   extend: {
     colors: {
-      primary: '#f16327',
+      primary: '#6D6C76',
       secondary: '#002d55',
       accent: '#00ff00',
       error: '#ff0000',
@@ -37,6 +37,12 @@ export const theme: MultiTenantThemeProps = {
         'label-color': '#111111',
         'current-page-color': '#222222',
         'current-page-color2': '#222222',
+      },
+      hero: {
+        background: '#F5F6F6',
+        heading: '#3F3E46',
+        overview: '#3F3E46',
+        callout: '#3F3E46',
       },
       card: {
         'background-color': '#F5F6F6',
