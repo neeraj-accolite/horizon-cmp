@@ -10,4 +10,12 @@
     @apply text-ImageWithContent-descriptionColor;
   }
 
+  .button {
+    @apply h-10 w-full gap-6;
+  
+    @screen sm {
+      width: fit-content;
+    }
+  }
+
   

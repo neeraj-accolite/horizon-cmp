@@ -1,17 +1,17 @@
 .button {
-  @apply h-10 w-full gap-2 bg-primary px-4 text-base font-bold leading-6;
+  @apply h-10 w-full gap-2 px-4 text-base font-bold leading-6;
 }
 
 .primary {
-  @apply text-buttonTextColor-primary;
+  @apply text-buttonTextColor-primary bg-primary;
 }
 
 .secondary {
-  @apply text-buttonTextColor-secondary;
+  @apply text-buttonTextColor-secondary bg-secondary;
 }
 
 .default {
-  @apply text-buttonTextColor-success;
+  @apply text-buttonTextColor-primary bg-primary;
 }
 
 .success {

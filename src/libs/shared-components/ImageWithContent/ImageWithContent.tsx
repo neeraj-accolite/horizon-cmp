@@ -29,8 +29,8 @@ const ImageWithContent: React.FC<ImageWithContentProps> = ({
           <Button
             url={buttonUrl}
             variant="bordered"
-            color="secondary"
-            className="mb-8 w-full justify-center sm:w-fit sm:justify-start"
+            color="primary"
+            className={`mb-8 justify-center sm:justify-start ${styles.button}`}
           >
             {buttonText}
           </Button>
