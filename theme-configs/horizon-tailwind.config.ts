@@ -61,6 +61,11 @@ export const theme: MultiTenantThemeProps = {
         warning: '#C9CC3F',
         danger: '#ffff',
       },
+      ImageWithContent: {
+        titleColor: '#3F3E46',
+        descriptionColor: '#3F3E46',
+        backgroundColor: '#D9D9D9',
+      },
     },
   },
 };
