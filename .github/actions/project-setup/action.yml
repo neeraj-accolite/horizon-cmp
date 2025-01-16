@@ -20,5 +20,5 @@ runs:
         restore-keys: |
           node-modules-${{ runner.os }}-
     - name: Install dependencies
-      run: npm ci
+      run: npm install
       shell: bash
