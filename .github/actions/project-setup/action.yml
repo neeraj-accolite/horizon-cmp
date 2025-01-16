@@ -1,0 +1,24 @@
+name: Repository checkout and Installation
+description: 'Composite action to checkout the repository and install dependencies'
+inputs:
+  node-version:
+    required: true
+    default: 20.x
+runs:
+  using: 'composite'
+  steps:
+    - name: Use Node.js ${{ inputs.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+        cache: 'npm'
+    - name: Cache Node.js modules
+      uses: actions/cache@v4
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ inputs.node-version }}-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-${{ inputs.node-version }}-
+    - name: Install dependencies
+      run: npm install
+      shell: bash
