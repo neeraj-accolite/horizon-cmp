@@ -5,7 +5,7 @@ export interface CardProps {
   link_url?: string;
 }
 
-//added commnets asf
+//added commnets asfasf
 
 export interface ServiceDetailCardsProps {
   title: string;
