@@ -5,7 +5,7 @@ import { Accordion } from '../Accordion';
 import CardContent from './ServiceDetailCardsContent';
 import styles from './ServiceDetailCards.module.scss';
 import PlumbingVector from '../Icons/IconList/PlumbingVector';
-///comments add
+///comments addas
 const ServiceDetailCards: React.FC<ServiceDetailCardsProps> = ({
   title,
   cards,
