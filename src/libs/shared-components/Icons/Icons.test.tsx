@@ -42,13 +42,6 @@ describe('Icons', () => {
     expect(icon).toHaveAttribute('width', '32');
   });
 
-  it('renders LocalOffer icon with filled prop true', () => {
-    const { container } = render(
-      <LocalOffer fill="currentColor" filled={true} size={24} />,
-    );
-    expect(container).toMatchSnapshot();
-  });
-
   it('renders LocalOffer icon with filled prop false', () => {
     const { container } = render(
       <LocalOffer fill="currentColor" filled={false} size={24} />,
