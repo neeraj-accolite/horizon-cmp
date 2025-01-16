@@ -17,6 +17,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - name: Log npm Cache Directory
+        run: |
+          echo "npm cache directory:"
+          echo $(npm config get cache)
       - name: Clear npm Cache
         run: npm cache clean --force
       - name: Confirm Cache Directory
