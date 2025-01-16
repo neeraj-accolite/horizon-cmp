@@ -12,13 +12,6 @@ runs:
       with:
         node-version: ${{ inputs.node-version }}
         cache: 'npm'
-    - name: Restore node_modules Cache
-      uses: actions/cache@v4
-      with:
-        path: node_modules
-        key: node-modules-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          node-modules-
     - name: Install dependencies
       run: npm ci
       shell: bash
@@ -27,3 +20,5 @@ runs:
       with:
         path: node_modules
         key: node-modules-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          node-modules-
