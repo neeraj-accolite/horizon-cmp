@@ -13,17 +13,16 @@ jobs:
     if: ${{ github.event.pull_request.merged == true }}
     runs-on: ${{matrix.os}}
     steps:
-      - name: Set Up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: Log npm Cache Directory
+      - name: Cleanup
         run: |
-          echo "npm cache directory:"
-          echo $(npm config get cache)
-      - name: Clear npm Cache
-        run: npm cache clean --force
-      - name: Confirm Cache Directory
-        run: |
-          echo "Remaining npm cache directory:"
-          ls -la $(npm config get cache) || echo "Cache cleared successfully!"
+          echo "Fetching list of cache key"
+          cacheKeysForPR=$(gh cache list --ref $BRANCH --limit 100 --json id --jq '.[].id')
+
+          ## Setting this to not fail the workflow while deleting cache keys.
+          set +e
+          echo "Deleting caches..."
+          for cacheKey in $cacheKeysForPR
+          do
+              gh cache delete $cacheKey
+          done
+          echo "Done"
