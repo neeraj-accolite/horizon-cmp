@@ -6,12 +6,8 @@ on:
 
 jobs:
   delete_npm_cache:
-    strategy:
-      matrix:
-        node-version: ['20.15.1']
-        os: ['macos-latest', 'windows-latest']
     if: ${{ github.event.pull_request.merged == true }}
-    runs-on: ${{matrix.os}}
+    runs-on: ubuntu-latest
     permissions:
       actions: write # Grant write access to actions
       contents: read # Default permission for repository contents
