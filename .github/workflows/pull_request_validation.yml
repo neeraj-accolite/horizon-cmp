@@ -1,33 +1,7 @@
 name: Build and Test on pull request
 on:
   pull_request:
-    types:
-      - opened
-      - synchronize
-      - reopened
-  pull_request_target:
-    types:
-      - closed
 
 jobs:
   build_and_test:
-    if: ${{ github.event.pull_request.merged != true }}
     uses: ./.github/workflows/build_and_test.yml
-  delete_npm_cache:
-    strategy:
-      matrix:
-        node-version: ['20.15.1']
-        os: ['macos-latest', 'windows-latest']
-    if: ${{ github.event.pull_request.merged == true }}
-    runs-on: ${{matrix.os}}
-    steps:
-      - name: Set Up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - name: Clear npm Cache
-        run: npm cache clean --force
-      - name: Confirm Cache Directory
-        run: |
-          echo "Remaining npm cache directory:"
-          ls -la $(npm config get cache) || echo "Cache cleared successfully!"
