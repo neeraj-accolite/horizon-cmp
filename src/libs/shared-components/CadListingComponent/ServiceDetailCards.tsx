@@ -6,7 +6,7 @@ import CardContent from './ServiceDetailCardsContent';
 import styles from './ServiceDetailCards.module.scss';
 import PlumbingVector from '../Icons/IconList/PlumbingVector';
 
-///comments addasa
+///comments add
 const ServiceDetailCards: React.FC<ServiceDetailCardsProps> = ({
   title,
   cards,
